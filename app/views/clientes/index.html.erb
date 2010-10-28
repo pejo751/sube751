@@ -1,0 +1,28 @@
+<h1>Clientes</h1>
+
+<table border = '1'>
+  <tr>
+    <th>Numero</th>
+    <th>Nombre</th>
+    <th>Domicilio</th>
+    <th>Inicio</th>
+  </tr>
+
+<% @clientes.each do |cliente| %>
+  <tr>
+    <td><%=h cliente.numero %></td>
+    <td><%=h cliente.nombre %></td>
+    <td><%=h cliente.domicilio %></td>
+    <td><%=h cliente.inicio %></td>
+    <td><%= link_to 'Show', cliente %></td>
+    <td><%= link_to 'Edit', edit_cliente_path(cliente) %></td>
+    <td><%= link_to 'Destroy', cliente, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New cliente', new_cliente_path %>
+<%= link_to 'Importar', new_archivo_path %>
+<%= link_to 'Borrar importaciones', archivos_path %>

@@ -1,0 +1,13 @@
+<h1>Importar clientes</h1>
+
+<% form_for @archivo, :html => { :multipart => true } do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :Archivo_CSV %><br />
+    <%= f.file_field :nombre %>
+  </p>
+  <br /><br />
+  <p>
+    <%= f.submit 'Importar' %> o <%= link_to 'Cancelar', clientes_path %>
+  </p>
+<% end %>

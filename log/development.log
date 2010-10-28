@@ -1,0 +1,2103 @@
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (78.1ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("schema_migrations")[0m
+  [4;36;1mSQL (109.4ms)[0m   [0;1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateClientes (20101026203721)
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE "clientes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nombre" varchar(255), "domicilio" varchar(255), "ing_sistem" date, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20101026203721')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("clientes")[0m
+
+
+Processing ClientesController#index (for 127.0.0.1 at 2010-10-26 17:44:41) [GET]
+  [4;36;1mCliente Load (0.0ms)[0m   [0;1mSELECT * FROM "clientes" [0m
+Rendering template within layouts/clientes
+Rendering clientes/index
+Completed in 688ms (View: 656, DB: 0) | 200 OK [http://localhost/clientes]
+
+
+Processing ClientesController#new (for 127.0.0.1 at 2010-10-26 17:44:46) [GET]
+Rendering template within layouts/clientes
+Rendering clientes/new
+Completed in 156ms (View: 141, DB: 0) | 200 OK [http://localhost/clientes/new]
+
+
+Processing ClientesController#index (for 127.0.0.1 at 2010-10-26 17:45:25) [GET]
+  [4;35;1mCliente Load (0.0ms)[0m   [0mSELECT * FROM "clientes" [0m
+Rendering template within layouts/clientes
+Rendering clientes/index
+Completed in 47ms (View: 16, DB: 0) | 200 OK [http://localhost/clientes]
+
+
+Processing ClientesController#new (for 127.0.0.1 at 2010-10-26 17:45:29) [GET]
+Rendering template within layouts/clientes
+Rendering clientes/new
+Completed in 78ms (View: 47, DB: 0) | 200 OK [http://localhost/clientes/new]
+
+
+Processing ClientesController#create (for 127.0.0.1 at 2010-10-26 17:45:38) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"0xH0g9v0sWcnmQY24Y2yT1YH8Z5Nq3inEaMCatdtzvA=", "cliente"=>{"ing_sistem(3i)"=>"26", "nombre"=>"JORGE", "domicilio"=>"PEREYRA", "ing_sistem(1i)"=>"2010", "ing_sistem(2i)"=>"10"}}
+  [4;36;1mCliente Create (31.3ms)[0m   [0;1mINSERT INTO "clientes" ("created_at", "nombre", "updated_at", "domicilio", "ing_sistem") VALUES('2010-10-26 20:45:38', 'JORGE', '2010-10-26 20:45:38', 'PEREYRA', '2010-10-26')[0m
+Redirected to http://localhost:3000/clientes/1
+Completed in 250ms (DB: 31) | 302 Found [http://localhost/clientes]
+
+
+Processing ClientesController#show (for 127.0.0.1 at 2010-10-26 17:45:39) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCliente Load (0.0ms)[0m   [0mSELECT * FROM "clientes" WHERE ("clientes"."id" = 1) [0m
+Rendering template within layouts/clientes
+Rendering clientes/show
+Completed in 63ms (View: 31, DB: 0) | 200 OK [http://localhost/clientes/1]
+
+
+Processing ClientesController#index (for 127.0.0.1 at 2010-10-26 17:45:42) [GET]
+  [4;36;1mCliente Load (0.0ms)[0m   [0;1mSELECT * FROM "clientes" [0m
+Rendering template within layouts/clientes
+Rendering clientes/index
+Completed in 63ms (View: 31, DB: 0) | 200 OK [http://localhost/clientes]
+
+
+Processing ClientesController#new (for 127.0.0.1 at 2010-10-26 17:45:45) [GET]
+Rendering template within layouts/clientes
+Rendering clientes/new
+Completed in 78ms (View: 63, DB: 0) | 200 OK [http://localhost/clientes/new]
+
+
+Processing ClientesController#create (for 127.0.0.1 at 2010-10-26 17:45:54) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"0xH0g9v0sWcnmQY24Y2yT1YH8Z5Nq3inEaMCatdtzvA=", "cliente"=>{"ing_sistem(3i)"=>"26", "nombre"=>"CLAUDIO", "domicilio"=>"CEBALLOS PAZ", "ing_sistem(1i)"=>"2010", "ing_sistem(2i)"=>"10"}}
+  [4;35;1mCliente Create (0.0ms)[0m   [0mINSERT INTO "clientes" ("created_at", "nombre", "updated_at", "domicilio", "ing_sistem") VALUES('2010-10-26 20:45:54', 'CLAUDIO', '2010-10-26 20:45:54', 'CEBALLOS PAZ', '2010-10-26')[0m
+Redirected to http://localhost:3000/clientes/2
+Completed in 141ms (DB: 0) | 302 Found [http://localhost/clientes]
+
+
+Processing ClientesController#show (for 127.0.0.1 at 2010-10-26 17:45:54) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mCliente Load (0.0ms)[0m   [0;1mSELECT * FROM "clientes" WHERE ("clientes"."id" = 2) [0m
+Rendering template within layouts/clientes
+Rendering clientes/show
+Completed in 47ms (View: 16, DB: 0) | 200 OK [http://localhost/clientes/2]
+
+
+Processing ClientesController#index (for 127.0.0.1 at 2010-10-26 17:45:57) [GET]
+  [4;35;1mCliente Load (0.0ms)[0m   [0mSELECT * FROM "clientes" [0m
+Rendering template within layouts/clientes
+Rendering clientes/index
+Completed in 63ms (View: 31, DB: 0) | 200 OK [http://localhost/clientes]
+
+
+Processing ClientesController#edit (for 127.0.0.1 at 2010-10-26 17:46:05) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCliente Load (0.0ms)[0m   [0;1mSELECT * FROM "clientes" WHERE ("clientes"."id" = 1) [0m
+Rendering template within layouts/clientes
+Rendering clientes/edit
+Completed in 125ms (View: 94, DB: 0) | 200 OK [http://localhost/clientes/1/edit]
+
+
+Processing ClientesController#update (for 127.0.0.1 at 2010-10-26 17:46:21) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"0xH0g9v0sWcnmQY24Y2yT1YH8Z5Nq3inEaMCatdtzvA=", "id"=>"1", "cliente"=>{"ing_sistem(3i)"=>"26", "nombre"=>"JORGE PEREYRA", "domicilio"=>"ENTRE RIOS 167 DPTO 9", "ing_sistem(1i)"=>"2010", "ing_sistem(2i)"=>"10"}}
+  [4;35;1mCliente Load (0.0ms)[0m   [0mSELECT * FROM "clientes" WHERE ("clientes"."id" = 1) [0m
+  [4;36;1mCliente Update (0.0ms)[0m   [0;1mUPDATE "clientes" SET "updated_at" = '2010-10-26 20:46:21', "domicilio" = 'ENTRE RIOS 167 DPTO 9', "nombre" = 'JORGE PEREYRA' WHERE "id" = 1[0m
+Redirected to http://localhost:3000/clientes/1
+Completed in 156ms (DB: 0) | 302 Found [http://localhost/clientes/1]
+
+
+Processing ClientesController#show (for 127.0.0.1 at 2010-10-26 17:46:21) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCliente Load (0.0ms)[0m   [0mSELECT * FROM "clientes" WHERE ("clientes"."id" = 1) [0m
+Rendering template within layouts/clientes
+Rendering clientes/show
+Completed in 47ms (View: 16, DB: 0) | 200 OK [http://localhost/clientes/1]
+
+
+Processing ClientesController#index (for 127.0.0.1 at 2010-10-26 17:46:23) [GET]
+  [4;36;1mCliente Load (15.6ms)[0m   [0;1mSELECT * FROM "clientes" [0m
+Rendering template within layouts/clientes
+Rendering clientes/index
+Completed in 141ms (View: 78, DB: 16) | 200 OK [http://localhost/clientes]
+
+
+Processing ClientesController#edit (for 127.0.0.1 at 2010-10-26 17:46:25) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mCliente Load (15.6ms)[0m   [0mSELECT * FROM "clientes" WHERE ("clientes"."id" = 2) [0m
+Rendering template within layouts/clientes
+Rendering clientes/edit
+Completed in 250ms (View: 188, DB: 16) | 200 OK [http://localhost/clientes/2/edit]
+
+
+Processing ClientesController#update (for 127.0.0.1 at 2010-10-26 17:46:38) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"0xH0g9v0sWcnmQY24Y2yT1YH8Z5Nq3inEaMCatdtzvA=", "id"=>"2", "cliente"=>{"ing_sistem(3i)"=>"26", "nombre"=>"CLAUDIO CEBALLOS PAZ", "domicilio"=>"MAIPU 234", "ing_sistem(1i)"=>"2010", "ing_sistem(2i)"=>"10"}}
+  [4;36;1mCliente Load (0.0ms)[0m   [0;1mSELECT * FROM "clientes" WHERE ("clientes"."id" = 2) [0m
+  [4;35;1mCliente Update (0.0ms)[0m   [0mUPDATE "clientes" SET "updated_at" = '2010-10-26 20:46:38', "domicilio" = 'MAIPU 234', "nombre" = 'CLAUDIO CEBALLOS PAZ' WHERE "id" = 2[0m
+Redirected to http://localhost:3000/clientes/2
+Completed in 172ms (DB: 0) | 302 Found [http://localhost/clientes/2]
+
+
+Processing ClientesController#show (for 127.0.0.1 at 2010-10-26 17:46:38) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mCliente Load (0.0ms)[0m   [0;1mSELECT * FROM "clientes" WHERE ("clientes"."id" = 2) [0m
+Rendering template within layouts/clientes
+Rendering clientes/show
+Completed in 47ms (View: 16, DB: 0) | 200 OK [http://localhost/clientes/2]
+
+
+Processing ClientesController#index (for 127.0.0.1 at 2010-10-26 17:46:40) [GET]
+  [4;35;1mCliente Load (0.0ms)[0m   [0mSELECT * FROM "clientes" [0m
+Rendering template within layouts/clientes
+Rendering clientes/index
+Completed in 78ms (View: 31, DB: 0) | 200 OK [http://localhost/clientes]
+
+
+Processing ClientesController#index (for 127.0.0.1 at 2010-10-26 17:48:46) [GET]
+  [4;36;1mCliente Load (0.0ms)[0m   [0;1mSELECT * FROM "clientes" [0m
+Rendering template within layouts/clientes
+Rendering clientes/index
+Completed in 453ms (View: 391, DB: 0) | 200 OK [http://localhost/clientes]
+
+
+Processing ClientesController#index (for 127.0.0.1 at 2010-10-26 17:52:50) [GET]
+  [4;36;1mCliente Load (0.0ms)[0m   [0;1mSELECT * FROM "clientes" [0m
+Rendering template within layouts/clientes
+Rendering clientes/index
+Completed in 266ms (View: 250, DB: 0) | 200 OK [http://localhost/clientes]
+
+
+Processing ClientesController#index (for 127.0.0.1 at 2010-10-26 18:00:50) [GET]
+  [4;35;1mCliente Load (0.0ms)[0m   [0mSELECT * FROM "clientes" [0m
+Rendering template within layouts/clientes
+Rendering clientes/index
+Completed in 78ms (View: 63, DB: 0) | 200 OK [http://localhost/clientes]
+
+
+Processing ClientesController#show (for 127.0.0.1 at 2010-10-26 18:00:54) [GET]
+  Parameters: {"id"=>"importar"}
+  [4;36;1mCliente Load (0.0ms)[0m   [0;1mSELECT * FROM "clientes" WHERE ("clientes"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Cliente with ID=importar):
+  app/controllers/clientes_controller.rb:16:in `show'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (140.6ms)
+Rendered rescues/_request_and_response (15.6ms)
+Rendering rescues/layout (not_found)
+
+
+Processing ClientesController#show (for 127.0.0.1 at 2010-10-26 18:02:22) [GET]
+  Parameters: {"id"=>"importar"}
+  [4;35;1mCliente Load (0.0ms)[0m   [0mSELECT * FROM "clientes" WHERE ("clientes"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Cliente with ID=importar):
+  app/controllers/clientes_controller.rb:16:in `show'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (421.9ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing ClientesController#show (for 127.0.0.1 at 2010-10-26 18:04:21) [GET]
+  Parameters: {"id"=>"importar"}
+  [4;36;1mCliente Load (0.0ms)[0m   [0;1mSELECT * FROM "clientes" WHERE ("clientes"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Cliente with ID=importar):
+  app/controllers/clientes_controller.rb:16:in `show'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (156.3ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing ClientesController#index (for 127.0.0.1 at 2010-10-26 18:04:24) [GET]
+  [4;35;1mCliente Load (0.0ms)[0m   [0mSELECT * FROM "clientes" [0m
+Rendering template within layouts/clientes
+Rendering clientes/index
+Completed in 469ms (View: 406, DB: 0) | 200 OK [http://localhost/clientes]
+
+
+Processing ClientesController#importar (for 127.0.0.1 at 2010-10-26 18:04:26) [GET]
+Redirected to http://localhost:3000subir
+Completed in 0ms (DB: 0) | 302 Found [http://localhost/importar]
+
+
+Processing ClientesController#importar (for 127.0.0.1 at 2010-10-26 18:04:26) [GET]
+Redirected to http://localhost:3000subir
+Completed in 16ms (DB: 0) | 302 Found [http://localhost/importar]
+
+
+Processing ClientesController#index (for 127.0.0.1 at 2010-10-26 18:09:56) [GET]
+  [4;36;1mCliente Load (0.0ms)[0m   [0;1mSELECT * FROM "clientes" [0m
+Rendering template within layouts/clientes
+Rendering clientes/index
+Completed in 109ms (View: 63, DB: 0) | 200 OK [http://localhost/clientes]
+
+
+Processing ClientesController#importar (for 127.0.0.1 at 2010-10-26 18:09:57) [GET]
+Redirected to http://localhost:3000subir
+Completed in 0ms (DB: 0) | 302 Found [http://localhost/importar]
+
+
+Processing ClientesController#importar (for 127.0.0.1 at 2010-10-26 18:09:58) [GET]
+Redirected to http://localhost:3000subir
+Completed in 16ms (DB: 0) | 302 Found [http://localhost/importar]
+
+
+Processing ClientesController#index (for 127.0.0.1 at 2010-10-26 18:13:34) [GET]
+  [4;35;1mCliente Load (15.6ms)[0m   [0mSELECT * FROM "clientes" [0m
+Rendering template within layouts/clientes
+Rendering clientes/index
+Completed in 375ms (View: 328, DB: 16) | 200 OK [http://localhost/clientes]
+
+
+Processing ClientesController#importar (for 127.0.0.1 at 2010-10-26 18:13:36) [GET]
+Redirected to http://localhost:3000subir
+Completed in 16ms (DB: 0) | 302 Found [http://localhost/importar]
+
+
+Processing ClientesController#importar (for 127.0.0.1 at 2010-10-26 18:13:36) [GET]
+Redirected to http://localhost:3000subir
+Completed in 16ms (DB: 0) | 302 Found [http://localhost/importar]
+
+
+Processing ClientesController#importar (for 127.0.0.1 at 2010-10-26 18:13:39) [GET]
+Redirected to http://localhost:3000subir
+Completed in 16ms (DB: 0) | 302 Found [http://localhost/importar]
+
+
+Processing ClientesController#index (for 127.0.0.1 at 2010-10-26 18:14:39) [GET]
+  [4;36;1mCliente Load (0.0ms)[0m   [0;1mSELECT * FROM "clientes" [0m
+Rendering template within layouts/clientes
+Rendering clientes/index
+Completed in 63ms (View: 31, DB: 0) | 200 OK [http://localhost/clientes]
+
+
+Processing ClientesController#importar (for 127.0.0.1 at 2010-10-26 18:14:42) [GET]
+Rendering template within layouts/clientes
+Rendering clientes/importar
+
+ActionView::TemplateError (undefined method `nil_class_path' for #<ActionView::Base:0x4786f38>) on line #3 of app/views/clientes/importar.html.erb:
+1: <h1>Ipmportar clientes</h1>
+2: 
+3: <% form_for :html => { :multipart => true } do |f| %>
+4:   <%= f.error_messages %>
+5:   <p>
+6:     <%= f.label :excel %><br />
+
+    app/views/clientes/importar.html.erb:3
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (187.5ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ClientesController#importar (for 127.0.0.1 at 2010-10-26 18:18:06) [GET]
+Rendering template within layouts/clientes
+Rendering clientes/importar
+
+ActionView::TemplateError (undefined method `nil_class_path' for #<ActionView::Base:0x461a6a8>) on line #3 of app/views/clientes/importar.html.erb:
+1: <h1>Ipmportar clientes</h1>
+2: 
+3: <% form_for :html => { :multipart => true } do |f| %>
+4:   <%= f.error_messages %>
+5:   <p>
+6:     <%= f.label :excel %><br />
+
+    app/views/clientes/importar.html.erb:3
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (468.8ms)
+Rendered rescues/_request_and_response (15.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ClientesController#importar (for 127.0.0.1 at 2010-10-26 18:18:12) [GET]
+Rendering template within layouts/clientes
+Rendering clientes/importar
+
+ActionView::TemplateError (undefined method `nil_class_path' for #<ActionView::Base:0x47c89c8>) on line #3 of app/views/clientes/importar.html.erb:
+1: <h1>Ipmportar clientes</h1>
+2: 
+3: <% form_for :html => { :multipart => true } do |f| %>
+4:   <%= f.error_messages %>
+5:   <p>
+6:     <%= f.label :excel %><br />
+
+    app/views/clientes/importar.html.erb:3
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (218.8ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ClientesController#importar (for 127.0.0.1 at 2010-10-26 18:19:13) [GET]
+Rendering template within layouts/clientes
+Rendering clientes/importar
+
+ActionView::TemplateError (`@/clientes' is not allowed as an instance variable name) on line #4 of app/views/clientes/importar.html.erb:
+1: <h1>Ipmportar clientes</h1>
+2: 
+3: <% form_for clientes_path, :html => { :multipart => true } do |f| %>
+4:   <%= f.error_messages %>
+5:   <p>
+6:     <%= f.label :excel %><br />
+7:     <%= f.file_field :excel %>
+
+    app/views/clientes/importar.html.erb:4
+    app/views/clientes/importar.html.erb:3
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (500.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ClientesController#importar (for 127.0.0.1 at 2010-10-26 18:20:49) [GET]
+Rendering template within layouts/clientes
+Rendering clientes/importar
+Completed in 63ms (View: 47, DB: 0) | 200 OK [http://localhost/importar]
+
+
+Processing ClientesController#index (for 127.0.0.1 at 2010-10-26 18:32:31) [GET]
+  [4;35;1mCliente Load (0.0ms)[0m   [0mSELECT * FROM "clientes" [0m
+Rendering template within layouts/clientes
+Rendering clientes/index
+Completed in 94ms (View: 63, DB: 0) | 200 OK [http://localhost/clientes]
+
+
+Processing ArchivosController#new (for 127.0.0.1 at 2010-10-26 18:32:36) [GET]
+
+ActionController::UnknownAction (No action responded to new. Actions: ):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ClientesController#index (for 127.0.0.1 at 2010-10-26 18:33:52) [GET]
+  [4;36;1mCliente Load (0.0ms)[0m   [0;1mSELECT * FROM "clientes" [0m
+Rendering template within layouts/clientes
+Rendering clientes/index
+Completed in 172ms (View: 78, DB: 0) | 200 OK [http://localhost/clientes]
+
+
+Processing ArchivosController#new (for 127.0.0.1 at 2010-10-26 18:33:54) [GET]
+
+ActiveRecord::StatementInvalid (Could not find table 'archivos'):
+  app/controllers/archivos_controller.rb:3:in `new'
+  app/controllers/archivos_controller.rb:3:in `new'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (453.1ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateClientes (20101026203721)
+Migrating to CreateArchivos (20101026212826)
+  [4;36;1mSQL (15.6ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (46.9ms)[0m   [0mCREATE TABLE "archivos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nombre" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20101026212826')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("archivos")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("clientes")[0m
+
+
+Processing ClientesController#index (for 127.0.0.1 at 2010-10-26 18:34:31) [GET]
+  [4;35;1mCliente Load (0.0ms)[0m   [0mSELECT * FROM "clientes" [0m
+Rendering template within layouts/clientes
+Rendering clientes/index
+Completed in 63ms (View: 31, DB: 0) | 200 OK [http://localhost/clientes]
+
+
+Processing ArchivosController#new (for 127.0.0.1 at 2010-10-26 18:34:32) [GET]
+
+ActionView::MissingTemplate (Missing template archivos/new.erb in view path app/views):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ClientesController#index (for 127.0.0.1 at 2010-10-26 18:36:25) [GET]
+  [4;36;1mCliente Load (0.0ms)[0m   [0;1mSELECT * FROM "clientes" [0m
+Rendering template within layouts/clientes
+Rendering clientes/index
+Completed in 63ms (View: 31, DB: 0) | 200 OK [http://localhost/clientes]
+
+
+Processing ArchivosController#new (for 127.0.0.1 at 2010-10-26 18:36:27) [GET]
+Rendering archivos/new
+Completed in 63ms (View: 47, DB: 0) | 200 OK [http://localhost/archivos/new]
+
+
+Processing ClientesController#index (for 127.0.0.1 at 2010-10-26 18:36:33) [GET]
+  [4;35;1mCliente Load (0.0ms)[0m   [0mSELECT * FROM "clientes" [0m
+Rendering template within layouts/clientes
+Rendering clientes/index
+Completed in 63ms (View: 47, DB: 0) | 200 OK [http://localhost/clientes]
+
+
+Processing ArchivosController#new (for 127.0.0.1 at 2010-10-26 18:36:36) [GET]
+Rendering archivos/new
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/archivos/new]
+
+
+Processing ArchivosController#new (for 127.0.0.1 at 2010-10-26 18:37:26) [GET]
+Rendering archivos/new
+Completed in 469ms (View: 438, DB: 0) | 200 OK [http://localhost/archivos/new]
+
+
+Processing ClientesController#index (for 127.0.0.1 at 2010-10-26 18:37:45) [GET]
+  [4;36;1mCliente Load (0.0ms)[0m   [0;1mSELECT * FROM "clientes" [0m
+Rendering template within layouts/clientes
+Rendering clientes/index
+Completed in 109ms (View: 63, DB: 0) | 200 OK [http://localhost/clientes]
+
+
+Processing ArchivosController#new (for 127.0.0.1 at 2010-10-26 18:37:47) [GET]
+Rendering archivos/new
+Completed in 109ms (View: 78, DB: 0) | 200 OK [http://localhost/archivos/new]
+
+
+Processing ArchivosController#create (for 127.0.0.1 at 2010-10-26 18:38:07) [POST]
+  Parameters: {"commit"=>"Importar", "archivo"=>{"nombre"=>#<File:C:/DOCUME~1/ADMINI~1/CONFIG~1/Temp/RackMultipart20101026-3128-rkibva-0>}, "authenticity_token"=>"0xH0g9v0sWcnmQY24Y2yT1YH8Z5Nq3inEaMCatdtzvA="}
+
+ActionController::UnknownAction (No action responded to create. Actions: new):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArchivosController#create (for 127.0.0.1 at 2010-10-26 18:45:05) [POST]
+  Parameters: {"commit"=>"Importar", "archivo"=>{"nombre"=>#<File:C:/DOCUME~1/ADMINI~1/CONFIG~1/Temp/RackMultipart20101026-3128-323lz2-0>}, "authenticity_token"=>"0xH0g9v0sWcnmQY24Y2yT1YH8Z5Nq3inEaMCatdtzvA="}
+  [4;35;1mArchivo Create (0.0ms)[0m   [0mINSERT INTO "archivos" ("created_at", "nombre", "updated_at") VALUES('2010-10-26 21:45:05', '--- !ruby/object:File 
+content_type: application/vnd.ms-excel
+original_path: cliente.csv
+', '2010-10-26 21:45:05')[0m
+Redirected to http://localhost:3000/archivos/1
+Completed in 156ms (DB: 0) | 302 Found [http://localhost/archivos]
+
+
+Processing ArchivosController#show (for 127.0.0.1 at 2010-10-26 18:45:05) [GET]
+  Parameters: {"id"=>"1"}
+
+ActionController::UnknownAction (No action responded to show. Actions: create and new):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArchivosController#create (for 127.0.0.1 at 2010-10-26 18:45:59) [POST]
+  Parameters: {"commit"=>"Importar", "archivo"=>{"nombre"=>#<File:C:/DOCUME~1/ADMINI~1/CONFIG~1/Temp/RackMultipart20101026-3128-6vtnbn-0>}, "authenticity_token"=>"0xH0g9v0sWcnmQY24Y2yT1YH8Z5Nq3inEaMCatdtzvA="}
+  [4;36;1mArchivo Create (0.0ms)[0m   [0;1mINSERT INTO "archivos" ("created_at", "nombre", "updated_at") VALUES('2010-10-26 21:45:59', '--- !ruby/object:File 
+content_type: application/vnd.ms-excel
+original_path: cliente.csv
+', '2010-10-26 21:45:59')[0m
+Redirected to http://localhost:3000/archivos/2
+Completed in 156ms (DB: 0) | 302 Found [http://localhost/archivos]
+
+
+Processing ArchivosController#show (for 127.0.0.1 at 2010-10-26 18:46:00) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mArchivo Load (0.0ms)[0m   [0mSELECT * FROM "archivos" WHERE ("archivos"."id" = 2) [0m
+
+ActionView::MissingTemplate (Missing template archivos/show.erb in view path app/views):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArchivosController#create (for 127.0.0.1 at 2010-10-26 18:47:39) [POST]
+  Parameters: {"commit"=>"Importar", "archivo"=>{"nombre"=>#<File:C:/DOCUME~1/ADMINI~1/CONFIG~1/Temp/RackMultipart20101026-3128-syfszu-0>}, "authenticity_token"=>"0xH0g9v0sWcnmQY24Y2yT1YH8Z5Nq3inEaMCatdtzvA="}
+  [4;36;1mArchivo Create (0.0ms)[0m   [0;1mINSERT INTO "archivos" ("created_at", "nombre", "updated_at") VALUES('2010-10-26 21:47:39', '--- !ruby/object:File 
+content_type: application/vnd.ms-excel
+original_path: cliente.csv
+', '2010-10-26 21:47:39')[0m
+Redirected to http://localhost:3000/archivos/3
+Completed in 156ms (DB: 0) | 302 Found [http://localhost/archivos]
+
+
+Processing ArchivosController#show (for 127.0.0.1 at 2010-10-26 18:47:39) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mArchivo Load (0.0ms)[0m   [0mSELECT * FROM "archivos" WHERE ("archivos"."id" = 3) [0m
+Rendering archivos/show
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/archivos/3]
+
+
+Processing ClientesController#index (for 127.0.0.1 at 2010-10-26 18:48:02) [GET]
+  [4;36;1mCliente Load (0.0ms)[0m   [0;1mSELECT * FROM "clientes" [0m
+Rendering template within layouts/clientes
+Rendering clientes/index
+Completed in 63ms (View: 47, DB: 0) | 200 OK [http://localhost/clientes]
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (78.1ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("schema_migrations")[0m
+  [4;36;1mSQL (203.1ms)[0m   [0;1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateClientes (20101026203721)
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE "clientes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nombre" varchar(255), "domicilio" varchar(255), "ing_sistem" date, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20101026203721')[0m
+Migrating to CreateArchivos (20101026212826)
+  [4;35;1mSQL (15.6ms)[0m   [0mCREATE TABLE "archivos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20101026212826')[0m
+Migrating to AddAttachmentsNombreToArchivos (20101026215815)
+  [4;35;1mSQL (0.0ms)[0m   [0mALTER TABLE "archivos" ADD "nombre_file_name" varchar(255)[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mALTER TABLE "archivos" ADD "nombre_content_type" varchar(255)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mALTER TABLE "archivos" ADD "nombre_file_size" integer[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mALTER TABLE "archivos" ADD "nombre_updated_at" datetime[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20101026215815')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("archivos")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("clientes")[0m
+
+
+Processing ArchivosController#new (for 127.0.0.1 at 2010-10-26 19:05:18) [GET]
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+NoMethodError (undefined method `has_attached_file' for #<Class:0x46d2f80>):
+  app/models/archivo.rb:2
+  app/controllers/archivos_controller.rb:3:in `new'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (171.9ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArchivosController#new (for 127.0.0.1 at 2010-10-26 19:07:31) [GET]
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+NoMethodError (undefined method `has_attached_file' for #<Class:0x46d32f8>):
+  app/models/archivo.rb:2
+  app/controllers/archivos_controller.rb:3:in `new'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (156.3ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArchivosController#new (for 127.0.0.1 at 2010-10-26 19:11:14) [GET]
+Rendering archivos/new
+Completed in 125ms (View: 94, DB: 0) | 200 OK [http://localhost/archivos/new]
+
+
+Processing ArchivosController#create (for 127.0.0.1 at 2010-10-26 19:11:24) [POST]
+  Parameters: {"commit"=>"Importar", "archivo"=>{"nombre"=>#<File:C:/DOCUME~1/ADMINI~1/CONFIG~1/Temp/RackMultipart20101026-3644-80ibel-0>}, "authenticity_token"=>"0xH0g9v0sWcnmQY24Y2yT1YH8Z5Nq3inEaMCatdtzvA="}
+  [4;36;1mArchivo Create (15.6ms)[0m   [0;1mINSERT INTO "archivos" ("created_at", "nombre_content_type", "updated_at", "nombre_file_name", "nombre_updated_at", "nombre_file_size") VALUES('2010-10-26 22:11:25', 'application/vnd.ms-excel', '2010-10-26 22:11:25', 'cliente.csv', '2010-10-26 22:11:24', 5854)[0m
+[paperclip] Saving attachments.
+[paperclip] saving /pruebas/archivos_csv/1/cliente.csv
+Redirected to http://localhost:3000/archivos/1
+Completed in 2406ms (DB: 16) | 302 Found [http://localhost/archivos]
+
+
+Processing ArchivosController#show (for 127.0.0.1 at 2010-10-26 19:11:27) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mArchivo Load (0.0ms)[0m   [0mSELECT * FROM "archivos" WHERE ("archivos"."id" = 1) [0m
+Rendering archivos/show
+Completed in 63ms (View: 31, DB: 0) | 200 OK [http://localhost/archivos/1]
+
+
+Processing ClientesController#index (for 127.0.0.1 at 2010-10-26 19:11:30) [GET]
+  [4;36;1mCliente Load (0.0ms)[0m   [0;1mSELECT * FROM "clientes" [0m
+Rendering template within layouts/clientes
+Rendering clientes/index
+Completed in 94ms (View: 63, DB: 0) | 200 OK [http://localhost/clientes]
+
+
+Processing ClientesController#index (for 127.0.0.1 at 2010-10-27 11:58:36) [GET]
+  [4;36;1mCliente Load (46.9ms)[0m   [0;1mSELECT * FROM "clientes" [0m
+Rendering template within layouts/clientes
+Rendering clientes/index
+Completed in 969ms (View: 891, DB: 47) | 200 OK [http://localhost/clientes]
+
+
+Processing ClientesController#index (for 127.0.0.1 at 2010-10-27 11:59:50) [GET]
+  [4;36;1mCliente Load (0.0ms)[0m   [0;1mSELECT * FROM "clientes" [0m
+Rendering template within layouts/clientes
+Rendering clientes/index
+Completed in 156ms (View: 125, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ClientesController#index (for 127.0.0.1 at 2010-10-27 11:59:59) [GET]
+  [4;35;1mCliente Load (0.0ms)[0m   [0mSELECT * FROM "clientes" [0m
+Rendering template within layouts/clientes
+Rendering clientes/index
+Completed in 47ms (View: 16, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ClientesController#index (for 127.0.0.1 at 2010-10-27 12:00:32) [GET]
+  [4;36;1mCliente Load (0.0ms)[0m   [0;1mSELECT * FROM "clientes" [0m
+Rendering template within layouts/clientes
+Rendering clientes/index
+Completed in 156ms (View: 125, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ClientesController#index (for 127.0.0.1 at 2010-10-27 12:00:42) [GET]
+  [4;35;1mCliente Load (15.6ms)[0m   [0mSELECT * FROM "clientes" [0m
+Rendering template within layouts/clientes
+Rendering clientes/index
+Completed in 63ms (View: 31, DB: 16) | 200 OK [http://localhost/]
+
+
+Processing ArchivosController#new (for 127.0.0.1 at 2010-10-27 12:01:09) [GET]
+Rendering archivos/new
+Completed in 297ms (View: 250, DB: 0) | 200 OK [http://localhost/archivos/new]
+
+
+Processing ArchivosController#create (for 127.0.0.1 at 2010-10-27 12:01:44) [POST]
+  Parameters: {"commit"=>"Importar", "archivo"=>{"nombre"=>#<File:C:/DOCUME~1/JorgeP/CONFIG~1/Temp/RackMultipart20101027-3380-17hy3w1-0>}, "authenticity_token"=>"xU/nlWBKY7W+saCQ8+tGZ9zuR5Di629Q4VPkZzhEsqM="}
+  [4;36;1mArchivo Create (15.6ms)[0m   [0;1mINSERT INTO "archivos" ("created_at", "nombre_content_type", "updated_at", "nombre_file_name", "nombre_updated_at", "nombre_file_size") VALUES('2010-10-27 15:01:45', 'application/vnd.ms-excel', '2010-10-27 15:01:45', 'cliente.csv', '2010-10-27 15:01:45', 5916)[0m
+[paperclip] Saving attachments.
+[paperclip] saving /pruebas/archivos_csv/2/cliente.csv
+Redirected to http://localhost:3000/archivos/2
+Completed in 22406ms (DB: 16) | 302 Found [http://localhost/archivos]
+
+
+Processing ArchivosController#show (for 127.0.0.1 at 2010-10-27 12:02:07) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mArchivo Load (0.0ms)[0m   [0mSELECT * FROM "archivos" WHERE ("archivos"."id" = 2) [0m
+Rendering archivos/show
+Completed in 63ms (View: 31, DB: 0) | 200 OK [http://localhost/archivos/2]
+
+
+Processing ClientesController#index (for 127.0.0.1 at 2010-10-27 12:02:20) [GET]
+  [4;36;1mCliente Load (0.0ms)[0m   [0;1mSELECT * FROM "clientes" [0m
+Rendering template within layouts/clientes
+Rendering clientes/index
+Completed in 47ms (View: 16, DB: 0) | 200 OK [http://localhost/clientes]
+
+
+Processing ClientesController#index (for 127.0.0.1 at 2010-10-27 12:03:11) [GET]
+  [4;35;1mCliente Load (0.0ms)[0m   [0mSELECT * FROM "clientes" [0m
+Rendering template within layouts/clientes
+Rendering clientes/index
+Completed in 109ms (View: 31, DB: 0) | 200 OK [http://localhost/clientes]
+
+
+Processing ArchivosController#index (for 127.0.0.1 at 2010-10-27 12:03:15) [GET]
+
+ActionController::UnknownAction (No action responded to index. Actions: create, new, and show):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArchivosController#index (for 127.0.0.1 at 2010-10-27 12:05:10) [GET]
+  [4;36;1mArchivo Load (0.0ms)[0m   [0;1mSELECT * FROM "archivos" [0m
+
+ActionView::MissingTemplate (Missing template archivos/index.erb in view path app/views):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArchivosController#index (for 127.0.0.1 at 2010-10-27 12:09:03) [GET]
+  [4;35;1mArchivo Load (15.6ms)[0m   [0mSELECT * FROM "archivos" [0m
+Rendering archivos/index
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each) on line #11 of app/views/archivos/index.html.erb:
+8: 	<th>nombre_updated_at</th>
+9:   </tr>
+10: 
+11: <% @archivos.each do |a| %>
+12:   <tr>
+13: 	<td><%=h a.nombre_file_name %></td>
+14: 	<td><%=h a.nombre_content_type %></td>
+
+    app/views/archivos/index.html.erb:11
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (109.4ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArchivosController#index (for 127.0.0.1 at 2010-10-27 12:09:11) [GET]
+  [4;36;1mArchivo Load (0.0ms)[0m   [0;1mSELECT * FROM "archivos" [0m
+Rendering archivos/index
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each) on line #11 of app/views/archivos/index.html.erb:
+8: 	<th>nombre_updated_at</th>
+9:   </tr>
+10: 
+11: <% @archivos.each do |a| %>
+12:   <tr>
+13: 	<td><%=h a.nombre_file_name %></td>
+14: 	<td><%=h a.nombre_content_type %></td>
+
+    app/views/archivos/index.html.erb:11
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (125.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArchivosController#index (for 127.0.0.1 at 2010-10-27 12:10:04) [GET]
+  [4;35;1mArchivo Load (15.6ms)[0m   [0mSELECT * FROM "archivos" [0m
+Rendering archivos/index
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each) on line #11 of app/views/archivos/index.html.erb:
+8: 	<th>nombre_updated_at</th>
+9:   </tr>
+10: 
+11: <% @archivos.each do |a| %>
+12:   <tr>
+13: 	<td><%=h a.nombre_file_name %></td>
+14: 	<td><%=h a.nombre_content_type %></td>
+
+    app/views/archivos/index.html.erb:11
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (109.4ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArchivosController#index (for 127.0.0.1 at 2010-10-27 12:10:27) [GET]
+  [4;36;1mArchivo Load (15.6ms)[0m   [0;1mSELECT * FROM "archivos" [0m
+Rendering archivos/index
+Completed in 125ms (View: 31, DB: 16) | 200 OK [http://localhost/archivos]
+
+
+Processing ArchivosController#index (for 127.0.0.1 at 2010-10-27 12:10:43) [GET]
+  [4;35;1mArchivo Load (15.6ms)[0m   [0mSELECT * FROM "archivos" [0m
+Rendering archivos/index
+Completed in 125ms (View: 31, DB: 16) | 200 OK [http://localhost/archivos]
+
+
+Processing ArchivosController#index (for 127.0.0.1 at 2010-10-27 12:11:54) [GET]
+  [4;36;1mArchivo Load (0.0ms)[0m   [0;1mSELECT * FROM "archivos" [0m
+Rendering archivos/index
+Completed in 250ms (View: 203, DB: 0) | 200 OK [http://localhost/archivos]
+
+
+Processing ArchivosController#index (for 127.0.0.1 at 2010-10-27 12:12:34) [GET]
+  [4;35;1mArchivo Load (15.6ms)[0m   [0mSELECT * FROM "archivos" [0m
+Rendering archivos/index
+Completed in 281ms (View: 188, DB: 16) | 200 OK [http://localhost/archivos]
+
+
+Processing ArchivosController#index (for 127.0.0.1 at 2010-10-27 12:13:12) [GET]
+  [4;36;1mArchivo Load (0.0ms)[0m   [0;1mSELECT * FROM "archivos" [0m
+Rendering archivos/index
+Completed in 516ms (View: 406, DB: 0) | 200 OK [http://localhost/archivos]
+
+
+Processing ArchivosController#index (for 127.0.0.1 at 2010-10-27 12:13:39) [GET]
+  [4;35;1mArchivo Load (0.0ms)[0m   [0mSELECT * FROM "archivos" [0m
+Rendering archivos/index
+Completed in 125ms (View: 47, DB: 0) | 200 OK [http://localhost/archivos]
+
+
+Processing ArchivosController#index (for 127.0.0.1 at 2010-10-27 12:13:44) [GET]
+  [4;36;1mArchivo Load (0.0ms)[0m   [0;1mSELECT * FROM "archivos" [0m
+Rendering archivos/index
+Completed in 125ms (View: 31, DB: 0) | 200 OK [http://localhost/archivos]
+
+
+Processing ClientesController#index (for 127.0.0.1 at 2010-10-27 12:13:52) [GET]
+  [4;35;1mCliente Load (0.0ms)[0m   [0mSELECT * FROM "clientes" [0m
+Rendering template within layouts/clientes
+Rendering clientes/index
+Completed in 47ms (View: 16, DB: 0) | 200 OK [http://localhost/clientes]
+
+
+Processing ArchivosController#index (for 127.0.0.1 at 2010-10-27 12:13:53) [GET]
+  [4;36;1mArchivo Load (15.6ms)[0m   [0;1mSELECT * FROM "archivos" [0m
+Rendering archivos/index
+Completed in 109ms (View: 16, DB: 16) | 200 OK [http://localhost/archivos]
+
+
+Processing ClientesController#index (for 127.0.0.1 at 2010-10-27 12:14:31) [GET]
+  [4;35;1mCliente Load (0.0ms)[0m   [0mSELECT * FROM "clientes" [0m
+Rendering template within layouts/clientes
+Rendering clientes/index
+Completed in 94ms (View: 0, DB: 0) | 200 OK [http://localhost/clientes]
+
+
+Processing ArchivosController#index (for 127.0.0.1 at 2010-10-27 12:14:34) [GET]
+  [4;36;1mArchivo Load (0.0ms)[0m   [0;1mSELECT * FROM "archivos" [0m
+Rendering archivos/index
+Completed in 109ms (View: 31, DB: 0) | 200 OK [http://localhost/archivos]
+
+
+Processing ClientesController#index (for 127.0.0.1 at 2010-10-27 12:14:39) [GET]
+  [4;35;1mCliente Load (0.0ms)[0m   [0mSELECT * FROM "clientes" [0m
+Rendering template within layouts/clientes
+Rendering clientes/index
+Completed in 94ms (View: 16, DB: 0) | 200 OK [http://localhost/clientes]
+
+
+Processing ClientesController#index (for 127.0.0.1 at 2010-10-27 12:15:13) [GET]
+  [4;36;1mCliente Load (0.0ms)[0m   [0;1mSELECT * FROM "clientes" [0m
+Rendering template within layouts/clientes
+Rendering clientes/index
+Completed in 109ms (View: 31, DB: 0) | 200 OK [http://localhost/clientes]
+
+
+Processing ArchivosController#new (for 127.0.0.1 at 2010-10-27 12:15:18) [GET]
+Rendering archivos/new
+Completed in 94ms (View: 16, DB: 0) | 200 OK [http://localhost/archivos/new]
+
+
+Processing ClientesController#index (for 127.0.0.1 at 2010-10-27 12:15:20) [GET]
+  [4;35;1mCliente Load (0.0ms)[0m   [0mSELECT * FROM "clientes" [0m
+Rendering template within layouts/clientes
+Rendering clientes/index
+Completed in 109ms (View: 16, DB: 0) | 200 OK [http://localhost/clientes]
+
+
+Processing ArchivosController#index (for 127.0.0.1 at 2010-10-27 12:15:21) [GET]
+  [4;36;1mArchivo Load (0.0ms)[0m   [0;1mSELECT * FROM "archivos" [0m
+Rendering archivos/index
+Completed in 281ms (View: 234, DB: 0) | 200 OK [http://localhost/archivos]
+
+
+Processing ClientesController#index (for 127.0.0.1 at 2010-10-27 12:18:48) [GET]
+  [4;35;1mCliente Load (15.6ms)[0m   [0mSELECT * FROM "clientes" [0m
+Rendering template within layouts/clientes
+Rendering clientes/index
+Completed in 47ms (View: 0, DB: 16) | 200 OK [http://localhost/clientes]
+
+
+Processing ClientesController#new (for 127.0.0.1 at 2010-10-27 12:18:51) [GET]
+Rendering template within layouts/clientes
+Rendering clientes/new
+Completed in 156ms (View: 63, DB: 0) | 200 OK [http://localhost/clientes/new]
+
+
+Processing ClientesController#create (for 127.0.0.1 at 2010-10-27 12:19:06) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"xU/nlWBKY7W+saCQ8+tGZ9zuR5Di629Q4VPkZzhEsqM=", "cliente"=>{"ing_sistem(3i)"=>"27", "nombre"=>"JORGE PEREYRA", "domicilio"=>"ENTRE RIOS 167", "ing_sistem(1i)"=>"2010", "ing_sistem(2i)"=>"10"}}
+  [4;36;1mCliente Create (31.3ms)[0m   [0;1mINSERT INTO "clientes" ("created_at", "nombre", "updated_at", "domicilio", "ing_sistem") VALUES('2010-10-27 15:19:06', 'JORGE PEREYRA', '2010-10-27 15:19:06', 'ENTRE RIOS 167', '2010-10-27')[0m
+Redirected to http://localhost:3000/clientes/1
+Completed in 156ms (DB: 31) | 302 Found [http://localhost/clientes]
+
+
+Processing ClientesController#show (for 127.0.0.1 at 2010-10-27 12:19:06) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCliente Load (15.6ms)[0m   [0mSELECT * FROM "clientes" WHERE ("clientes"."id" = 1) [0m
+Rendering template within layouts/clientes
+Rendering clientes/show
+Completed in 63ms (View: 16, DB: 16) | 200 OK [http://localhost/clientes/1]
+
+
+Processing ClientesController#index (for 127.0.0.1 at 2010-10-27 12:19:09) [GET]
+  [4;36;1mCliente Load (0.0ms)[0m   [0;1mSELECT * FROM "clientes" [0m
+Rendering template within layouts/clientes
+Rendering clientes/index
+Completed in 63ms (View: 31, DB: 0) | 200 OK [http://localhost/clientes]
+
+
+Processing ClientesController#show (for 127.0.0.1 at 2010-10-27 12:19:12) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCliente Load (0.0ms)[0m   [0mSELECT * FROM "clientes" WHERE ("clientes"."id" = 1) [0m
+Rendering template within layouts/clientes
+Rendering clientes/show
+Completed in 63ms (View: 0, DB: 0) | 200 OK [http://localhost/clientes/1]
+
+
+Processing ClientesController#index (for 127.0.0.1 at 2010-10-27 12:19:13) [GET]
+  [4;36;1mCliente Load (0.0ms)[0m   [0;1mSELECT * FROM "clientes" [0m
+Rendering template within layouts/clientes
+Rendering clientes/index
+Completed in 109ms (View: 31, DB: 0) | 200 OK [http://localhost/clientes]
+
+
+Processing ClientesController#edit (for 127.0.0.1 at 2010-10-27 12:19:15) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCliente Load (0.0ms)[0m   [0mSELECT * FROM "clientes" WHERE ("clientes"."id" = 1) [0m
+Rendering template within layouts/clientes
+Rendering clientes/edit
+Completed in 125ms (View: 78, DB: 0) | 200 OK [http://localhost/clientes/1/edit]
+
+
+Processing ClientesController#index (for 127.0.0.1 at 2010-10-27 12:19:17) [GET]
+  [4;36;1mCliente Load (0.0ms)[0m   [0;1mSELECT * FROM "clientes" [0m
+Rendering template within layouts/clientes
+Rendering clientes/index
+Completed in 141ms (View: 31, DB: 0) | 200 OK [http://localhost/clientes]
+
+
+Processing ArchivosController#index (for 127.0.0.1 at 2010-10-27 12:19:19) [GET]
+  [4;35;1mArchivo Load (0.0ms)[0m   [0mSELECT * FROM "archivos" [0m
+Rendering archivos/index
+Completed in 188ms (View: 47, DB: 0) | 200 OK [http://localhost/archivos]
+
+
+Processing ClientesController#index (for 127.0.0.1 at 2010-10-27 12:19:22) [GET]
+  [4;36;1mCliente Load (0.0ms)[0m   [0;1mSELECT * FROM "clientes" [0m
+Rendering template within layouts/clientes
+Rendering clientes/index
+Completed in 63ms (View: 31, DB: 0) | 200 OK [http://localhost/clientes]
+
+
+Processing ArchivosController#new (for 127.0.0.1 at 2010-10-27 12:19:23) [GET]
+Rendering archivos/new
+Completed in 63ms (View: 31, DB: 0) | 200 OK [http://localhost/archivos/new]
+
+
+Processing ArchivosController#create (for 127.0.0.1 at 2010-10-27 12:19:31) [POST]
+  Parameters: {"commit"=>"Importar", "archivo"=>{"nombre"=>#<File:C:/DOCUME~1/JorgeP/CONFIG~1/Temp/RackMultipart20101027-3380-19tpp6a-0>}, "authenticity_token"=>"xU/nlWBKY7W+saCQ8+tGZ9zuR5Di629Q4VPkZzhEsqM="}
+  [4;35;1mArchivo Create (0.0ms)[0m   [0mINSERT INTO "archivos" ("created_at", "nombre_content_type", "updated_at", "nombre_file_name", "nombre_updated_at", "nombre_file_size") VALUES('2010-10-27 15:19:32', 'application/vnd.ms-excel', '2010-10-27 15:19:32', 'cliente.xls', '2010-10-27 15:19:32', 25088)[0m
+[paperclip] Saving attachments.
+[paperclip] saving /pruebas/archivos_csv/3/cliente.xls
+Redirected to http://localhost:3000/archivos/3
+Completed in 23141ms (DB: 0) | 302 Found [http://localhost/archivos]
+
+
+Processing ArchivosController#show (for 127.0.0.1 at 2010-10-27 12:19:54) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mArchivo Load (0.0ms)[0m   [0;1mSELECT * FROM "archivos" WHERE ("archivos"."id" = 3) [0m
+Rendering archivos/show
+Completed in 47ms (View: 16, DB: 0) | 200 OK [http://localhost/archivos/3]
+
+
+Processing ClientesController#index (for 127.0.0.1 at 2010-10-27 12:19:59) [GET]
+  [4;35;1mCliente Load (0.0ms)[0m   [0mSELECT * FROM "clientes" [0m
+Rendering template within layouts/clientes
+Rendering clientes/index
+Completed in 109ms (View: 16, DB: 0) | 200 OK [http://localhost/clientes]
+
+
+Processing ArchivosController#index (for 127.0.0.1 at 2010-10-27 12:20:02) [GET]
+  [4;36;1mArchivo Load (0.0ms)[0m   [0;1mSELECT * FROM "archivos" [0m
+Rendering archivos/index
+Completed in 266ms (View: 16, DB: 0) | 200 OK [http://localhost/archivos]
+
+
+Processing ArchivosController#destroy (for 127.0.0.1 at 2010-10-27 12:21:11) [DELETE]
+  Parameters: {"authenticity_token"=>"xU/nlWBKY7W+saCQ8+tGZ9zuR5Di629Q4VPkZzhEsqM=", "id"=>"3"}
+
+ActionController::UnknownAction (No action responded to destroy. Actions: create, index, new, and show):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArchivosController#destroy (for 127.0.0.1 at 2010-10-27 12:22:54) [DELETE]
+  Parameters: {"authenticity_token"=>"xU/nlWBKY7W+saCQ8+tGZ9zuR5Di629Q4VPkZzhEsqM=", "id"=>"3"}
+  [4;35;1mArchivo Load (15.6ms)[0m   [0mSELECT * FROM "archivos" WHERE ("archivos"."id" = 3) [0m
+[paperclip] Deleting attachments.
+[paperclip] deleting /pruebas/archivos_csv/3/cliente.xls
+  [4;36;1mArchivo Destroy (15.6ms)[0m   [0;1mDELETE FROM "archivos" WHERE "id" = 3[0m
+Redirected to http://localhost:3000/clientes
+Completed in 1047ms (DB: 31) | 302 Found [http://localhost/archivos/3]
+
+
+Processing ClientesController#index (for 127.0.0.1 at 2010-10-27 12:22:56) [GET]
+  [4;35;1mCliente Load (15.6ms)[0m   [0mSELECT * FROM "clientes" [0m
+Rendering template within layouts/clientes
+Rendering clientes/index
+Completed in 47ms (View: 16, DB: 16) | 200 OK [http://localhost/clientes]
+
+
+Processing ArchivosController#index (for 127.0.0.1 at 2010-10-27 12:22:59) [GET]
+  [4;36;1mArchivo Load (0.0ms)[0m   [0;1mSELECT * FROM "archivos" [0m
+Rendering archivos/index
+Completed in 109ms (View: 31, DB: 0) | 200 OK [http://localhost/archivos]
+
+
+Processing ClientesController#index (for 127.0.0.1 at 2010-10-27 12:23:28) [GET]
+  [4;35;1mCliente Load (0.0ms)[0m   [0mSELECT * FROM "clientes" [0m
+Rendering template within layouts/clientes
+Rendering clientes/index
+Completed in 63ms (View: 31, DB: 0) | 200 OK [http://localhost/clientes]
+
+
+Processing ArchivosController#index (for 127.0.0.1 at 2010-10-27 12:23:32) [GET]
+  [4;36;1mArchivo Load (0.0ms)[0m   [0;1mSELECT * FROM "archivos" [0m
+Rendering archivos/index
+Completed in 63ms (View: 31, DB: 0) | 200 OK [http://localhost/archivos]
+
+
+Processing ClientesController#index (for 127.0.0.1 at 2010-10-27 12:23:36) [GET]
+  [4;35;1mCliente Load (0.0ms)[0m   [0mSELECT * FROM "clientes" [0m
+Rendering template within layouts/clientes
+Rendering clientes/index
+Completed in 94ms (View: 16, DB: 0) | 200 OK [http://localhost/clientes]
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateClientes (20101026203721)
+Migrating to CreateArchivos (20101026212826)
+Migrating to AddAttachmentsNombreToArchivos (20101026215815)
+Migrating to AddNumeroToClientes (20101027152625)
+  [4;36;1mSQL (31.3ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mALTER TABLE "clientes" ADD "numero" integer[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20101027152625')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("archivos")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("clientes")[0m
+
+
+Processing ClientesController#index (for 127.0.0.1 at 2010-10-27 12:31:50) [GET]
+  [4;36;1mCliente Load (0.0ms)[0m   [0;1mSELECT * FROM "clientes" [0m
+Rendering template within layouts/clientes
+Rendering clientes/index
+Completed in 203ms (View: 172, DB: 0) | 200 OK [http://localhost/clientes]
+
+
+Processing ClientesController#index (for 127.0.0.1 at 2010-10-27 12:32:14) [GET]
+  [4;35;1mCliente Load (0.0ms)[0m   [0mSELECT * FROM "clientes" [0m
+Rendering template within layouts/clientes
+Rendering clientes/index
+Completed in 94ms (View: 16, DB: 0) | 200 OK [http://localhost/clientes]
+
+
+Processing ClientesController#edit (for 127.0.0.1 at 2010-10-27 12:32:17) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCliente Load (0.0ms)[0m   [0;1mSELECT * FROM "clientes" WHERE ("clientes"."id" = 1) [0m
+Rendering template within layouts/clientes
+Rendering clientes/edit
+Completed in 109ms (View: 63, DB: 0) | 200 OK [http://localhost/clientes/1/edit]
+
+
+Processing ClientesController#update (for 127.0.0.1 at 2010-10-27 12:32:26) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"xU/nlWBKY7W+saCQ8+tGZ9zuR5Di629Q4VPkZzhEsqM=", "id"=>"1", "cliente"=>{"ing_sistem(3i)"=>"27", "nombre"=>"JORGE PEREYRA", "domicilio"=>"ENTRE RIOS 167", "numero"=>"4545", "ing_sistem(1i)"=>"2010", "ing_sistem(2i)"=>"10"}}
+  [4;35;1mCliente Load (15.6ms)[0m   [0mSELECT * FROM "clientes" WHERE ("clientes"."id" = 1) [0m
+  [4;36;1mCliente Update (0.0ms)[0m   [0;1mUPDATE "clientes" SET "updated_at" = '2010-10-27 15:32:26', "numero" = 4545 WHERE "id" = 1[0m
+Redirected to http://localhost:3000/clientes/1
+Completed in 172ms (DB: 16) | 302 Found [http://localhost/clientes/1]
+
+
+Processing ClientesController#show (for 127.0.0.1 at 2010-10-27 12:32:26) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCliente Load (0.0ms)[0m   [0mSELECT * FROM "clientes" WHERE ("clientes"."id" = 1) [0m
+Rendering template within layouts/clientes
+Rendering clientes/show
+Completed in 109ms (View: 78, DB: 0) | 200 OK [http://localhost/clientes/1]
+
+
+Processing ClientesController#show (for 127.0.0.1 at 2010-10-27 12:32:47) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCliente Load (0.0ms)[0m   [0;1mSELECT * FROM "clientes" WHERE ("clientes"."id" = 1) [0m
+Rendering template within layouts/clientes
+Rendering clientes/show
+Completed in 109ms (View: 16, DB: 0) | 200 OK [http://localhost/clientes/1]
+
+
+Processing ClientesController#index (for 127.0.0.1 at 2010-10-27 12:32:49) [GET]
+  [4;35;1mCliente Load (0.0ms)[0m   [0mSELECT * FROM "clientes" [0m
+Rendering template within layouts/clientes
+Rendering clientes/index
+Completed in 63ms (View: 31, DB: 0) | 200 OK [http://localhost/clientes]
+
+
+Processing ArchivosController#index (for 127.0.0.1 at 2010-10-27 12:32:53) [GET]
+  [4;36;1mArchivo Load (0.0ms)[0m   [0;1mSELECT * FROM "archivos" [0m
+Rendering archivos/index
+Completed in 188ms (View: 109, DB: 0) | 200 OK [http://localhost/archivos]
+
+
+Processing ClientesController#index (for 127.0.0.1 at 2010-10-27 12:32:55) [GET]
+  [4;35;1mCliente Load (0.0ms)[0m   [0mSELECT * FROM "clientes" [0m
+Rendering template within layouts/clientes
+Rendering clientes/index
+Completed in 63ms (View: 31, DB: 0) | 200 OK [http://localhost/clientes]
+
+
+Processing ArchivosController#new (for 127.0.0.1 at 2010-10-27 12:32:57) [GET]
+Rendering archivos/new
+Completed in 203ms (View: 172, DB: 0) | 200 OK [http://localhost/archivos/new]
+
+
+Processing ClientesController#index (for 127.0.0.1 at 2010-10-27 12:33:00) [GET]
+  [4;36;1mCliente Load (15.6ms)[0m   [0;1mSELECT * FROM "clientes" [0m
+Rendering template within layouts/clientes
+Rendering clientes/index
+Completed in 94ms (View: 47, DB: 16) | 200 OK [http://localhost/clientes]
+
+
+Processing ArchivosController#new (for 127.0.0.1 at 2010-10-27 12:33:02) [GET]
+Rendering archivos/new
+Completed in 47ms (View: 16, DB: 0) | 200 OK [http://localhost/archivos/new]
+
+
+Processing ClientesController#index (for 127.0.0.1 at 2010-10-27 12:33:08) [GET]
+  [4;35;1mCliente Load (0.0ms)[0m   [0mSELECT * FROM "clientes" [0m
+Rendering template within layouts/clientes
+Rendering clientes/index
+Completed in 47ms (View: 16, DB: 0) | 200 OK [http://localhost/clientes]
+
+
+Processing ClientesController#index (for 127.0.0.1 at 2010-10-27 12:33:39) [GET]
+  [4;36;1mCliente Load (0.0ms)[0m   [0;1mSELECT * FROM "clientes" [0m
+Rendering template within layouts/clientes
+Rendering clientes/index
+Completed in 78ms (View: 47, DB: 0) | 200 OK [http://localhost/clientes]
+
+
+Processing ClientesController#new (for 127.0.0.1 at 2010-10-27 12:33:45) [GET]
+Rendering template within layouts/clientes
+Rendering clientes/new
+Completed in 94ms (View: 63, DB: 0) | 200 OK [http://localhost/clientes/new]
+
+
+Processing ClientesController#index (for 127.0.0.1 at 2010-10-27 12:33:56) [GET]
+  [4;35;1mCliente Load (0.0ms)[0m   [0mSELECT * FROM "clientes" [0m
+Rendering template within layouts/clientes
+Rendering clientes/index
+Completed in 109ms (View: 31, DB: 0) | 200 OK [http://localhost/clientes]
+
+
+Processing ClientesController#index (for 127.0.0.1 at 2010-10-27 12:34:13) [GET]
+  [4;36;1mCliente Load (0.0ms)[0m   [0;1mSELECT * FROM "clientes" [0m
+Rendering template within layouts/clientes
+Rendering clientes/index
+Completed in 94ms (View: 16, DB: 0) | 200 OK [http://localhost/clientes]
+
+
+Processing ClientesController#new (for 127.0.0.1 at 2010-10-27 12:34:16) [GET]
+Rendering template within layouts/clientes
+Rendering clientes/new
+Completed in 141ms (View: 63, DB: 0) | 200 OK [http://localhost/clientes/new]
+
+
+Processing ClientesController#create (for 127.0.0.1 at 2010-10-27 12:34:37) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"xU/nlWBKY7W+saCQ8+tGZ9zuR5Di629Q4VPkZzhEsqM=", "cliente"=>{"ing_sistem(3i)"=>"27", "nombre"=>"OMAR ABRAHAM", "domicilio"=>"RIVADAVIA 5555", "numero"=>"7878", "ing_sistem(1i)"=>"2010", "ing_sistem(2i)"=>"10"}}
+  [4;35;1mCliente Create (0.0ms)[0m   [0mINSERT INTO "clientes" ("created_at", "nombre", "updated_at", "domicilio", "ing_sistem", "numero") VALUES('2010-10-27 15:34:37', 'OMAR ABRAHAM', '2010-10-27 15:34:37', 'RIVADAVIA 5555', '2010-10-27', 7878)[0m
+Redirected to http://localhost:3000/clientes/2
+Completed in 172ms (DB: 0) | 302 Found [http://localhost/clientes]
+
+
+Processing ClientesController#show (for 127.0.0.1 at 2010-10-27 12:34:37) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mCliente Load (0.0ms)[0m   [0;1mSELECT * FROM "clientes" WHERE ("clientes"."id" = 2) [0m
+Rendering template within layouts/clientes
+Rendering clientes/show
+Completed in 63ms (View: 31, DB: 0) | 200 OK [http://localhost/clientes/2]
+
+
+Processing ClientesController#index (for 127.0.0.1 at 2010-10-27 12:34:41) [GET]
+  [4;35;1mCliente Load (15.6ms)[0m   [0mSELECT * FROM "clientes" [0m
+Rendering template within layouts/clientes
+Rendering clientes/index
+Completed in 94ms (View: 47, DB: 16) | 200 OK [http://localhost/clientes]
+
+
+Processing ClientesController#edit (for 127.0.0.1 at 2010-10-27 12:34:43) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mCliente Load (0.0ms)[0m   [0;1mSELECT * FROM "clientes" WHERE ("clientes"."id" = 2) [0m
+Rendering template within layouts/clientes
+Rendering clientes/edit
+Completed in 141ms (View: 94, DB: 0) | 200 OK [http://localhost/clientes/2/edit]
+
+
+Processing ClientesController#index (for 127.0.0.1 at 2010-10-27 12:34:46) [GET]
+  [4;35;1mCliente Load (15.6ms)[0m   [0mSELECT * FROM "clientes" [0m
+Rendering template within layouts/clientes
+Rendering clientes/index
+Completed in 78ms (View: 31, DB: 16) | 200 OK [http://localhost/clientes]
+
+
+Processing ClientesController#show (for 127.0.0.1 at 2010-10-27 12:34:52) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mCliente Load (0.0ms)[0m   [0;1mSELECT * FROM "clientes" WHERE ("clientes"."id" = 2) [0m
+Rendering template within layouts/clientes
+Rendering clientes/show
+Completed in 109ms (View: 16, DB: 0) | 200 OK [http://localhost/clientes/2]
+
+
+Processing ClientesController#index (for 127.0.0.1 at 2010-10-27 12:34:56) [GET]
+  [4;35;1mCliente Load (0.0ms)[0m   [0mSELECT * FROM "clientes" [0m
+Rendering template within layouts/clientes
+Rendering clientes/index
+Completed in 125ms (View: 31, DB: 0) | 200 OK [http://localhost/clientes]
+
+
+Processing ClientesController#index (for 127.0.0.1 at 2010-10-27 12:36:55) [GET]
+  [4;36;1mCliente Load (0.0ms)[0m   [0;1mSELECT * FROM "clientes" [0m
+Rendering template within layouts/clientes
+Rendering clientes/index
+Completed in 125ms (View: 47, DB: 0) | 200 OK [http://localhost/clientes]
+
+
+Processing ArchivosController#index (for 127.0.0.1 at 2010-10-27 12:37:00) [GET]
+  [4;35;1mArchivo Load (0.0ms)[0m   [0mSELECT * FROM "archivos" [0m
+Rendering archivos/index
+Completed in 109ms (View: 31, DB: 0) | 200 OK [http://localhost/archivos]
+
+
+Processing ClientesController#index (for 127.0.0.1 at 2010-10-27 12:37:02) [GET]
+  [4;36;1mCliente Load (0.0ms)[0m   [0;1mSELECT * FROM "clientes" [0m
+Rendering template within layouts/clientes
+Rendering clientes/index
+Completed in 125ms (View: 47, DB: 0) | 200 OK [http://localhost/clientes]
+
+
+Processing ClientesController#index (for 127.0.0.1 at 2010-10-27 12:37:14) [GET]
+  [4;35;1mCliente Load (0.0ms)[0m   [0mSELECT * FROM "clientes" [0m
+Rendering template within layouts/clientes
+Rendering clientes/index
+Completed in 141ms (View: 47, DB: 0) | 200 OK [http://localhost/clientes]
+
+
+Processing ArchivosController#new (for 127.0.0.1 at 2010-10-27 12:37:18) [GET]
+Rendering archivos/new
+Completed in 109ms (View: 16, DB: 0) | 200 OK [http://localhost/archivos/new]
+
+
+Processing ClientesController#index (for 127.0.0.1 at 2010-10-27 12:37:20) [GET]
+  [4;36;1mCliente Load (0.0ms)[0m   [0;1mSELECT * FROM "clientes" [0m
+Rendering template within layouts/clientes
+Rendering clientes/index
+Completed in 141ms (View: 63, DB: 0) | 200 OK [http://localhost/clientes]
+
+
+Processing ArchivosController#index (for 127.0.0.1 at 2010-10-27 12:37:21) [GET]
+  [4;35;1mArchivo Load (15.6ms)[0m   [0mSELECT * FROM "archivos" [0m
+Rendering archivos/index
+Completed in 141ms (View: 31, DB: 16) | 200 OK [http://localhost/archivos]
+
+
+Processing ClientesController#index (for 127.0.0.1 at 2010-10-27 12:37:24) [GET]
+  [4;36;1mCliente Load (0.0ms)[0m   [0;1mSELECT * FROM "clientes" [0m
+Rendering template within layouts/clientes
+Rendering clientes/index
+Completed in 63ms (View: 31, DB: 0) | 200 OK [http://localhost/clientes]
+
+
+Processing ArchivosController#index (for 127.0.0.1 at 2010-10-27 12:37:25) [GET]
+  [4;35;1mArchivo Load (0.0ms)[0m   [0mSELECT * FROM "archivos" [0m
+Rendering archivos/index
+Completed in 109ms (View: 31, DB: 0) | 200 OK [http://localhost/archivos]
+
+
+Processing ClientesController#index (for 127.0.0.1 at 2010-10-27 12:37:39) [GET]
+  [4;36;1mCliente Load (0.0ms)[0m   [0;1mSELECT * FROM "clientes" [0m
+Rendering template within layouts/clientes
+Rendering clientes/index
+Completed in 109ms (View: 31, DB: 0) | 200 OK [http://localhost/clientes]
+
+
+Processing ClientesController#show (for 127.0.0.1 at 2010-10-27 12:37:43) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mCliente Load (15.6ms)[0m   [0mSELECT * FROM "clientes" WHERE ("clientes"."id" = 2) [0m
+Rendering template within layouts/clientes
+Rendering clientes/show
+Completed in 109ms (View: 16, DB: 16) | 200 OK [http://localhost/clientes/2]
+
+
+Processing ClientesController#index (for 127.0.0.1 at 2010-10-27 12:37:47) [GET]
+  [4;36;1mCliente Load (0.0ms)[0m   [0;1mSELECT * FROM "clientes" [0m
+Rendering template within layouts/clientes
+Rendering clientes/index
+Completed in 109ms (View: 31, DB: 0) | 200 OK [http://localhost/clientes]
+
+
+Processing ArchivosController#index (for 127.0.0.1 at 2010-10-27 12:38:17) [GET]
+  [4;35;1mArchivo Load (0.0ms)[0m   [0mSELECT * FROM "archivos" [0m
+Rendering archivos/index
+Completed in 94ms (View: 16, DB: 0) | 200 OK [http://localhost/archivos]
+
+
+Processing ClientesController#index (for 127.0.0.1 at 2010-10-27 12:38:42) [GET]
+  [4;36;1mCliente Load (0.0ms)[0m   [0;1mSELECT * FROM "clientes" [0m
+Rendering template within layouts/clientes
+Rendering clientes/index
+Completed in 109ms (View: 31, DB: 0) | 200 OK [http://localhost/clientes]
+
+
+Processing ClientesController#show (for 127.0.0.1 at 2010-10-27 12:38:45) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCliente Load (0.0ms)[0m   [0mSELECT * FROM "clientes" WHERE ("clientes"."id" = 1) [0m
+Rendering template within layouts/clientes
+Rendering clientes/show
+Completed in 125ms (View: 31, DB: 0) | 200 OK [http://localhost/clientes/1]
+
+
+Processing ClientesController#index (for 127.0.0.1 at 2010-10-27 12:38:46) [GET]
+  [4;36;1mCliente Load (15.6ms)[0m   [0;1mSELECT * FROM "clientes" [0m
+Rendering template within layouts/clientes
+Rendering clientes/index
+Completed in 125ms (View: 31, DB: 16) | 200 OK [http://localhost/clientes]
+
+
+Processing ArchivosController#index (for 127.0.0.1 at 2010-10-27 12:38:50) [GET]
+  [4;35;1mArchivo Load (0.0ms)[0m   [0mSELECT * FROM "archivos" [0m
+Rendering archivos/index
+Completed in 109ms (View: 16, DB: 0) | 200 OK [http://localhost/archivos]
+
+
+Processing ClientesController#index (for 127.0.0.1 at 2010-10-27 12:38:56) [GET]
+  [4;36;1mCliente Load (0.0ms)[0m   [0;1mSELECT * FROM "clientes" [0m
+Rendering template within layouts/clientes
+Rendering clientes/index
+Completed in 109ms (View: 31, DB: 0) | 200 OK [http://localhost/clientes]
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (93.8ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("schema_migrations")[0m
+  [4;36;1mSQL (93.8ms)[0m   [0;1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateClientes (20101026203721)
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE "clientes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "numero" integer, "nombre" varchar(255), "domicilio" varchar(255), "inicio" date, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20101026203721')[0m
+Migrating to CreateArchivos (20101026212826)
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE "archivos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20101026212826')[0m
+Migrating to AddAttachmentsNombreToArchivos (20101026215815)
+  [4;35;1mSQL (0.0ms)[0m   [0mALTER TABLE "archivos" ADD "nombre_file_name" varchar(255)[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mALTER TABLE "archivos" ADD "nombre_content_type" varchar(255)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mALTER TABLE "archivos" ADD "nombre_file_size" integer[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mALTER TABLE "archivos" ADD "nombre_updated_at" datetime[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20101026215815')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("archivos")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("clientes")[0m
+
+
+Processing ClientesController#index (for 127.0.0.1 at 2010-10-27 12:45:52) [GET]
+  [4;36;1mCliente Load (0.0ms)[0m   [0;1mSELECT * FROM "clientes" [0m
+Rendering template within layouts/clientes
+Rendering clientes/index
+Completed in 156ms (View: 125, DB: 0) | 200 OK [http://localhost/clientes]
+
+
+Processing ClientesController#new (for 127.0.0.1 at 2010-10-27 12:45:54) [GET]
+Rendering template within layouts/clientes
+Rendering clientes/new
+Completed in 156ms (View: 125, DB: 0) | 200 OK [http://localhost/clientes/new]
+
+
+Processing ClientesController#create (for 127.0.0.1 at 2010-10-27 12:46:03) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"xU/nlWBKY7W+saCQ8+tGZ9zuR5Di629Q4VPkZzhEsqM=", "cliente"=>{"nombre"=>"JORGE PEREYRA", "inicio(1i)"=>"2010", "inicio(2i)"=>"10", "inicio(3i)"=>"27", "domicilio"=>"ENTRE RIOS 167", "numero"=>"1"}}
+  [4;35;1mCliente Create (15.6ms)[0m   [0mINSERT INTO "clientes" ("created_at", "nombre", "updated_at", "domicilio", "inicio", "numero") VALUES('2010-10-27 15:46:03', 'JORGE PEREYRA', '2010-10-27 15:46:03', 'ENTRE RIOS 167', '2010-10-27', 1)[0m
+Redirected to http://localhost:3000/clientes/1
+Completed in 141ms (DB: 16) | 302 Found [http://localhost/clientes]
+
+
+Processing ClientesController#show (for 127.0.0.1 at 2010-10-27 12:46:03) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCliente Load (0.0ms)[0m   [0;1mSELECT * FROM "clientes" WHERE ("clientes"."id" = 1) [0m
+Rendering template within layouts/clientes
+Rendering clientes/show
+Completed in 63ms (View: 31, DB: 0) | 200 OK [http://localhost/clientes/1]
+
+
+Processing ClientesController#index (for 127.0.0.1 at 2010-10-27 12:46:06) [GET]
+  [4;35;1mCliente Load (0.0ms)[0m   [0mSELECT * FROM "clientes" [0m
+Rendering template within layouts/clientes
+Rendering clientes/index
+Completed in 63ms (View: 16, DB: 0) | 200 OK [http://localhost/clientes]
+
+
+Processing ClientesController#new (for 127.0.0.1 at 2010-10-27 12:46:11) [GET]
+Rendering template within layouts/clientes
+Rendering clientes/new
+Completed in 109ms (View: 31, DB: 0) | 200 OK [http://localhost/clientes/new]
+
+
+Processing ClientesController#create (for 127.0.0.1 at 2010-10-27 12:46:28) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"xU/nlWBKY7W+saCQ8+tGZ9zuR5Di629Q4VPkZzhEsqM=", "cliente"=>{"nombre"=>"OMAR ABRAHAM", "inicio(1i)"=>"2010", "inicio(2i)"=>"10", "inicio(3i)"=>"27", "domicilio"=>"RIVADAVIA 5555", "numero"=>"2"}}
+  [4;36;1mCliente Create (0.0ms)[0m   [0;1mINSERT INTO "clientes" ("created_at", "nombre", "updated_at", "domicilio", "inicio", "numero") VALUES('2010-10-27 15:46:28', 'OMAR ABRAHAM', '2010-10-27 15:46:28', 'RIVADAVIA 5555', '2010-10-27', 2)[0m
+Redirected to http://localhost:3000/clientes/2
+Completed in 172ms (DB: 0) | 302 Found [http://localhost/clientes]
+
+
+Processing ClientesController#show (for 127.0.0.1 at 2010-10-27 12:46:28) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mCliente Load (0.0ms)[0m   [0mSELECT * FROM "clientes" WHERE ("clientes"."id" = 2) [0m
+Rendering template within layouts/clientes
+Rendering clientes/show
+Completed in 63ms (View: 16, DB: 0) | 200 OK [http://localhost/clientes/2]
+
+
+Processing ClientesController#index (for 127.0.0.1 at 2010-10-27 12:46:30) [GET]
+  [4;36;1mCliente Load (0.0ms)[0m   [0;1mSELECT * FROM "clientes" [0m
+Rendering template within layouts/clientes
+Rendering clientes/index
+Completed in 125ms (View: 47, DB: 0) | 200 OK [http://localhost/clientes]
+
+
+Processing ArchivosController#index (for 127.0.0.1 at 2010-10-27 12:46:33) [GET]
+  [4;35;1mArchivo Load (0.0ms)[0m   [0mSELECT * FROM "archivos" [0m
+Rendering archivos/index
+Completed in 94ms (View: 16, DB: 0) | 200 OK [http://localhost/archivos]
+
+
+Processing ClientesController#index (for 127.0.0.1 at 2010-10-27 12:46:40) [GET]
+  [4;36;1mCliente Load (0.0ms)[0m   [0;1mSELECT * FROM "clientes" [0m
+Rendering template within layouts/clientes
+Rendering clientes/index
+Completed in 125ms (View: 31, DB: 0) | 200 OK [http://localhost/clientes]
+
+
+Processing ArchivosController#new (for 127.0.0.1 at 2010-10-27 12:46:42) [GET]
+Rendering archivos/new
+Completed in 266ms (View: 156, DB: 0) | 200 OK [http://localhost/archivos/new]
+
+
+Processing ArchivosController#create (for 127.0.0.1 at 2010-10-27 12:47:23) [POST]
+  Parameters: {"commit"=>"Importar", "archivo"=>{"nombre"=>#<File:C:/DOCUME~1/JorgeP/CONFIG~1/Temp/RackMultipart20101027-2268-1tnznl7-0>}, "authenticity_token"=>"xU/nlWBKY7W+saCQ8+tGZ9zuR5Di629Q4VPkZzhEsqM="}
+Rendering archivos/new
+Completed in 609ms (View: 31, DB: 0) | 200 OK [http://localhost/archivos]
+
+
+Processing ArchivosController#create (for 127.0.0.1 at 2010-10-27 12:47:54) [POST]
+  Parameters: {"commit"=>"Importar", "archivo"=>{"nombre"=>#<File:C:/DOCUME~1/JorgeP/CONFIG~1/Temp/RackMultipart20101027-2268-kcybtf-0>}, "authenticity_token"=>"xU/nlWBKY7W+saCQ8+tGZ9zuR5Di629Q4VPkZzhEsqM="}
+Rendering archivos/new
+Completed in 172ms (View: 16, DB: 0) | 200 OK [http://localhost/archivos]
+
+
+Processing ArchivosController#create (for 127.0.0.1 at 2010-10-27 12:47:57) [POST]
+  Parameters: {"commit"=>"Importar", "authenticity_token"=>"xU/nlWBKY7W+saCQ8+tGZ9zuR5Di629Q4VPkZzhEsqM="}
+  [4;35;1mArchivo Create (0.0ms)[0m   [0mINSERT INTO "archivos" ("created_at", "nombre_content_type", "updated_at", "nombre_file_name", "nombre_updated_at", "nombre_file_size") VALUES('2010-10-27 15:47:57', NULL, '2010-10-27 15:47:57', NULL, NULL, NULL)[0m
+[paperclip] Saving attachments.
+Redirected to http://localhost:3000/archivos/1
+Completed in 203ms (DB: 0) | 302 Found [http://localhost/archivos]
+
+
+Processing ArchivosController#show (for 127.0.0.1 at 2010-10-27 12:47:57) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mArchivo Load (0.0ms)[0m   [0;1mSELECT * FROM "archivos" WHERE ("archivos"."id" = 1) [0m
+Rendering archivos/show
+Completed in 94ms (View: 63, DB: 0) | 200 OK [http://localhost/archivos/1]
+
+
+Processing ClientesController#index (for 127.0.0.1 at 2010-10-27 12:47:59) [GET]
+  [4;35;1mCliente Load (0.0ms)[0m   [0mSELECT * FROM "clientes" [0m
+Rendering template within layouts/clientes
+Rendering clientes/index
+Completed in 125ms (View: 47, DB: 0) | 200 OK [http://localhost/clientes]
+
+
+Processing ArchivosController#index (for 127.0.0.1 at 2010-10-27 12:48:02) [GET]
+  [4;36;1mArchivo Load (0.0ms)[0m   [0;1mSELECT * FROM "archivos" [0m
+Rendering archivos/index
+Completed in 125ms (View: 16, DB: 0) | 200 OK [http://localhost/archivos]
+
+
+Processing ArchivosController#destroy (for 127.0.0.1 at 2010-10-27 12:48:06) [DELETE]
+  Parameters: {"authenticity_token"=>"xU/nlWBKY7W+saCQ8+tGZ9zuR5Di629Q4VPkZzhEsqM=", "id"=>"1"}
+  [4;35;1mArchivo Load (0.0ms)[0m   [0mSELECT * FROM "archivos" WHERE ("archivos"."id" = 1) [0m
+[paperclip] Deleting attachments.
+  [4;36;1mArchivo Destroy (0.0ms)[0m   [0;1mDELETE FROM "archivos" WHERE "id" = 1[0m
+Redirected to http://localhost:3000/clientes
+Completed in 219ms (DB: 0) | 302 Found [http://localhost/archivos/1]
+
+
+Processing ClientesController#index (for 127.0.0.1 at 2010-10-27 12:48:07) [GET]
+  [4;35;1mCliente Load (0.0ms)[0m   [0mSELECT * FROM "clientes" [0m
+Rendering template within layouts/clientes
+Rendering clientes/index
+Completed in 125ms (View: 94, DB: 0) | 200 OK [http://localhost/clientes]
+
+
+Processing ArchivosController#index (for 127.0.0.1 at 2010-10-27 12:48:09) [GET]
+  [4;36;1mArchivo Load (0.0ms)[0m   [0;1mSELECT * FROM "archivos" [0m
+Rendering archivos/index
+Completed in 78ms (View: 0, DB: 0) | 200 OK [http://localhost/archivos]
+
+
+Processing ClientesController#index (for 127.0.0.1 at 2010-10-27 12:48:11) [GET]
+  [4;35;1mCliente Load (0.0ms)[0m   [0mSELECT * FROM "clientes" [0m
+Rendering template within layouts/clientes
+Rendering clientes/index
+Completed in 125ms (View: 31, DB: 0) | 200 OK [http://localhost/clientes]
+
+
+Processing ArchivosController#new (for 127.0.0.1 at 2010-10-27 12:48:13) [GET]
+Rendering archivos/new
+Completed in 109ms (View: 31, DB: 0) | 200 OK [http://localhost/archivos/new]
+
+
+Processing ArchivosController#create (for 127.0.0.1 at 2010-10-27 12:48:20) [POST]
+  Parameters: {"commit"=>"Importar", "archivo"=>{"nombre"=>#<File:C:/DOCUME~1/JorgeP/CONFIG~1/Temp/RackMultipart20101027-2268-1nfdykm-0>}, "authenticity_token"=>"xU/nlWBKY7W+saCQ8+tGZ9zuR5Di629Q4VPkZzhEsqM="}
+Rendering archivos/new
+Completed in 188ms (View: 31, DB: 0) | 200 OK [http://localhost/archivos]
+
+
+Processing ArchivosController#create (for 127.0.0.1 at 2010-10-27 12:48:46) [POST]
+  Parameters: {"commit"=>"Importar", "archivo"=>{"nombre"=>#<File:C:/DOCUME~1/JorgeP/CONFIG~1/Temp/RackMultipart20101027-2268-1km97ff-0>}, "authenticity_token"=>"xU/nlWBKY7W+saCQ8+tGZ9zuR5Di629Q4VPkZzhEsqM="}
+  [4;36;1mArchivo Create (0.0ms)[0m   [0;1mINSERT INTO "archivos" ("created_at", "nombre_content_type", "updated_at", "nombre_file_name", "nombre_updated_at", "nombre_file_size") VALUES('2010-10-27 15:48:46', 'application/vnd.ms-excel', '2010-10-27 15:48:46', 'cliente.csv', '2010-10-27 15:48:46', 5912)[0m
+[paperclip] Saving attachments.
+[paperclip] saving /pruebas/archivos_csv/2/cliente.csv
+Redirected to http://localhost:3000/archivos/2
+Completed in 22281ms (DB: 0) | 302 Found [http://localhost/archivos]
+
+
+Processing ArchivosController#show (for 127.0.0.1 at 2010-10-27 12:49:08) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mArchivo Load (0.0ms)[0m   [0mSELECT * FROM "archivos" WHERE ("archivos"."id" = 2) [0m
+Rendering archivos/show
+Completed in 31ms (View: 0, DB: 0) | 200 OK [http://localhost/archivos/2]
+
+
+Processing ClientesController#index (for 127.0.0.1 at 2010-10-27 12:49:11) [GET]
+  [4;36;1mCliente Load (0.0ms)[0m   [0;1mSELECT * FROM "clientes" [0m
+Rendering template within layouts/clientes
+Rendering clientes/index
+Completed in 109ms (View: 31, DB: 0) | 200 OK [http://localhost/clientes]
+
+
+Processing ArchivosController#new (for 127.0.0.1 at 2010-10-27 12:55:07) [GET]
+Rendering archivos/new
+Completed in 47ms (View: 16, DB: 0) | 200 OK [http://localhost/archivos/new]
+
+
+Processing ClientesController#index (for 127.0.0.1 at 2010-10-27 12:55:09) [GET]
+  [4;35;1mCliente Load (0.0ms)[0m   [0mSELECT * FROM "clientes" [0m
+Rendering template within layouts/clientes
+Rendering clientes/index
+Completed in 234ms (View: 31, DB: 0) | 200 OK [http://localhost/clientes]
+
+
+Processing ArchivosController#index (for 127.0.0.1 at 2010-10-27 12:55:11) [GET]
+  [4;36;1mArchivo Load (0.0ms)[0m   [0;1mSELECT * FROM "archivos" [0m
+Rendering archivos/index
+Completed in 63ms (View: 16, DB: 0) | 200 OK [http://localhost/archivos]
+
+
+Processing ClientesController#index (for 127.0.0.1 at 2010-10-27 12:55:13) [GET]
+  [4;35;1mCliente Load (0.0ms)[0m   [0mSELECT * FROM "clientes" [0m
+Rendering template within layouts/clientes
+Rendering clientes/index
+Completed in 94ms (View: 47, DB: 0) | 200 OK [http://localhost/clientes]
+
+
+Processing ArchivosController#new (for 127.0.0.1 at 2010-10-27 12:55:16) [GET]
+Rendering archivos/new
+Completed in 63ms (View: 31, DB: 0) | 200 OK [http://localhost/archivos/new]
+
+
+Processing ArchivosController#create (for 127.0.0.1 at 2010-10-27 12:55:22) [POST]
+  Parameters: {"commit"=>"Importar", "archivo"=>{"nombre"=>#<File:C:/DOCUME~1/JorgeP/CONFIG~1/Temp/RackMultipart20101027-2268-vlyh8j-0>}, "authenticity_token"=>"xU/nlWBKY7W+saCQ8+tGZ9zuR5Di629Q4VPkZzhEsqM="}
+Rendering archivos/new
+Completed in 188ms (View: 47, DB: 0) | 200 OK [http://localhost/archivos]
+
+
+Processing ArchivosController#create (for 127.0.0.1 at 2010-10-27 12:55:35) [POST]
+  Parameters: {"commit"=>"Importar", "archivo"=>{"nombre"=>#<File:C:/DOCUME~1/JorgeP/CONFIG~1/Temp/RackMultipart20101027-2268-1t4w8z8-0>}, "authenticity_token"=>"xU/nlWBKY7W+saCQ8+tGZ9zuR5Di629Q4VPkZzhEsqM="}
+Rendering archivos/new
+Completed in 203ms (View: 16, DB: 0) | 200 OK [http://localhost/archivos]
+
+
+Processing ArchivosController#create (for 127.0.0.1 at 2010-10-27 12:55:38) [POST]
+  Parameters: {"commit"=>"Importar", "authenticity_token"=>"xU/nlWBKY7W+saCQ8+tGZ9zuR5Di629Q4VPkZzhEsqM="}
+  [4;36;1mArchivo Create (0.0ms)[0m   [0;1mINSERT INTO "archivos" ("created_at", "nombre_content_type", "updated_at", "nombre_file_name", "nombre_updated_at", "nombre_file_size") VALUES('2010-10-27 15:55:38', NULL, '2010-10-27 15:55:38', NULL, NULL, NULL)[0m
+[paperclip] Saving attachments.
+Redirected to http://localhost:3000/archivos/3
+Completed in 203ms (DB: 0) | 302 Found [http://localhost/archivos]
+
+
+Processing ArchivosController#show (for 127.0.0.1 at 2010-10-27 12:55:38) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mArchivo Load (0.0ms)[0m   [0mSELECT * FROM "archivos" WHERE ("archivos"."id" = 3) [0m
+Rendering archivos/show
+Completed in 31ms (View: 0, DB: 0) | 200 OK [http://localhost/archivos/3]
+
+
+Processing ClientesController#index (for 127.0.0.1 at 2010-10-27 12:55:41) [GET]
+  [4;36;1mCliente Load (0.0ms)[0m   [0;1mSELECT * FROM "clientes" [0m
+Rendering template within layouts/clientes
+Rendering clientes/index
+Completed in 78ms (View: 31, DB: 0) | 200 OK [http://localhost/clientes]
+
+
+Processing ArchivosController#index (for 127.0.0.1 at 2010-10-27 12:55:43) [GET]
+  [4;35;1mArchivo Load (0.0ms)[0m   [0mSELECT * FROM "archivos" [0m
+Rendering archivos/index
+Completed in 125ms (View: 31, DB: 0) | 200 OK [http://localhost/archivos]
+
+
+Processing ArchivosController#destroy (for 127.0.0.1 at 2010-10-27 12:55:46) [DELETE]
+  Parameters: {"authenticity_token"=>"xU/nlWBKY7W+saCQ8+tGZ9zuR5Di629Q4VPkZzhEsqM=", "id"=>"3"}
+  [4;36;1mArchivo Load (0.0ms)[0m   [0;1mSELECT * FROM "archivos" WHERE ("archivos"."id" = 3) [0m
+[paperclip] Deleting attachments.
+  [4;35;1mArchivo Destroy (0.0ms)[0m   [0mDELETE FROM "archivos" WHERE "id" = 3[0m
+Redirected to http://localhost:3000/clientes
+Completed in 422ms (DB: 0) | 302 Found [http://localhost/archivos/3]
+
+
+Processing ClientesController#index (for 127.0.0.1 at 2010-10-27 12:55:47) [GET]
+  [4;36;1mCliente Load (0.0ms)[0m   [0;1mSELECT * FROM "clientes" [0m
+Rendering template within layouts/clientes
+Rendering clientes/index
+Completed in 63ms (View: 31, DB: 0) | 200 OK [http://localhost/clientes]
+
+
+Processing ArchivosController#new (for 127.0.0.1 at 2010-10-27 12:56:03) [GET]
+Rendering archivos/new
+Completed in 63ms (View: 31, DB: 0) | 200 OK [http://localhost/archivos/new]
+
+
+Processing ArchivosController#create (for 127.0.0.1 at 2010-10-27 12:56:12) [POST]
+  Parameters: {"commit"=>"Importar", "archivo"=>{"nombre"=>#<File:C:/DOCUME~1/JorgeP/CONFIG~1/Temp/RackMultipart20101027-2268-1ce7rvn-0>}, "authenticity_token"=>"xU/nlWBKY7W+saCQ8+tGZ9zuR5Di629Q4VPkZzhEsqM="}
+Rendering archivos/new
+Completed in 391ms (View: 16, DB: 0) | 200 OK [http://localhost/archivos]
+
+
+Processing ClientesController#index (for 127.0.0.1 at 2010-10-27 12:56:15) [GET]
+  [4;35;1mCliente Load (0.0ms)[0m   [0mSELECT * FROM "clientes" [0m
+Rendering template within layouts/clientes
+Rendering clientes/index
+Completed in 125ms (View: 31, DB: 0) | 200 OK [http://localhost/clientes]
+
+
+Processing ArchivosController#index (for 127.0.0.1 at 2010-10-27 12:56:17) [GET]
+  [4;36;1mArchivo Load (0.0ms)[0m   [0;1mSELECT * FROM "archivos" [0m
+Rendering archivos/index
+Completed in 94ms (View: 16, DB: 0) | 200 OK [http://localhost/archivos]
+
+
+Processing ClientesController#index (for 127.0.0.1 at 2010-10-27 12:56:19) [GET]
+  [4;35;1mCliente Load (15.6ms)[0m   [0mSELECT * FROM "clientes" [0m
+Rendering template within layouts/clientes
+Rendering clientes/index
+Completed in 78ms (View: 31, DB: 16) | 200 OK [http://localhost/clientes]
+
+
+Processing ArchivosController#new (for 127.0.0.1 at 2010-10-27 12:56:39) [GET]
+Rendering archivos/new
+Completed in 94ms (View: 16, DB: 0) | 200 OK [http://localhost/archivos/new]
+
+
+Processing ArchivosController#create (for 127.0.0.1 at 2010-10-27 12:56:44) [POST]
+  Parameters: {"commit"=>"Importar", "archivo"=>{"nombre"=>#<File:C:/DOCUME~1/JorgeP/CONFIG~1/Temp/RackMultipart20101027-2268-o819ig-0>}, "authenticity_token"=>"xU/nlWBKY7W+saCQ8+tGZ9zuR5Di629Q4VPkZzhEsqM="}
+Rendering archivos/new
+Completed in 313ms (View: 16, DB: 0) | 200 OK [http://localhost/archivos]
+
+
+Processing ArchivosController#create (for 127.0.0.1 at 2010-10-27 12:56:49) [POST]
+  Parameters: {"commit"=>"Importar", "archivo"=>{"nombre"=>#<File:C:/DOCUME~1/JorgeP/CONFIG~1/Temp/RackMultipart20101027-2268-cdpwgb-0>}, "authenticity_token"=>"xU/nlWBKY7W+saCQ8+tGZ9zuR5Di629Q4VPkZzhEsqM="}
+Rendering archivos/new
+Completed in 203ms (View: 31, DB: 0) | 200 OK [http://localhost/archivos]
+
+
+Processing ClientesController#index (for 127.0.0.1 at 2010-10-27 12:56:53) [GET]
+  [4;36;1mCliente Load (0.0ms)[0m   [0;1mSELECT * FROM "clientes" [0m
+Rendering template within layouts/clientes
+Rendering clientes/index
+Completed in 78ms (View: 47, DB: 0) | 200 OK [http://localhost/clientes]
+
+
+Processing ArchivosController#index (for 127.0.0.1 at 2010-10-27 12:56:55) [GET]
+  [4;35;1mArchivo Load (0.0ms)[0m   [0mSELECT * FROM "archivos" [0m
+Rendering archivos/index
+Completed in 109ms (View: 16, DB: 0) | 200 OK [http://localhost/archivos]
+
+
+Processing ClientesController#index (for 127.0.0.1 at 2010-10-27 12:56:57) [GET]
+  [4;36;1mCliente Load (15.6ms)[0m   [0;1mSELECT * FROM "clientes" [0m
+Rendering template within layouts/clientes
+Rendering clientes/index
+Completed in 109ms (View: 31, DB: 16) | 200 OK [http://localhost/clientes]
+
+
+Processing ArchivosController#new (for 127.0.0.1 at 2010-10-27 12:56:59) [GET]
+Rendering archivos/new
+Completed in 94ms (View: 16, DB: 0) | 200 OK [http://localhost/archivos/new]
+
+
+Processing ArchivosController#create (for 127.0.0.1 at 2010-10-27 12:57:04) [POST]
+  Parameters: {"commit"=>"Importar", "archivo"=>{"nombre"=>#<File:C:/DOCUME~1/JorgeP/CONFIG~1/Temp/RackMultipart20101027-2268-50nvhk-0>}, "authenticity_token"=>"xU/nlWBKY7W+saCQ8+tGZ9zuR5Di629Q4VPkZzhEsqM="}
+Rendering archivos/new
+Completed in 219ms (View: 31, DB: 0) | 200 OK [http://localhost/archivos]
+
+
+Processing ClientesController#index (for 127.0.0.1 at 2010-10-27 12:57:34) [GET]
+  [4;35;1mCliente Load (0.0ms)[0m   [0mSELECT * FROM "clientes" [0m
+Rendering template within layouts/clientes
+Rendering clientes/index
+Completed in 109ms (View: 31, DB: 0) | 200 OK [http://localhost/clientes]
+
+
+Processing ArchivosController#new (for 127.0.0.1 at 2010-10-27 12:57:36) [GET]
+Rendering archivos/new
+Completed in 78ms (View: 31, DB: 0) | 200 OK [http://localhost/archivos/new]
+
+
+Processing ArchivosController#create (for 127.0.0.1 at 2010-10-27 12:57:42) [POST]
+  Parameters: {"commit"=>"Importar", "archivo"=>{"nombre"=>#<File:C:/DOCUME~1/JorgeP/CONFIG~1/Temp/RackMultipart20101027-2268-65dm8k-0>}, "authenticity_token"=>"xU/nlWBKY7W+saCQ8+tGZ9zuR5Di629Q4VPkZzhEsqM="}
+Rendering archivos/new
+Completed in 172ms (View: 16, DB: 0) | 200 OK [http://localhost/archivos]
+
+
+Processing ArchivosController#create (for 127.0.0.1 at 2010-10-27 12:57:56) [POST]
+  Parameters: {"commit"=>"Importar", "archivo"=>{"nombre"=>#<File:C:/DOCUME~1/JorgeP/CONFIG~1/Temp/RackMultipart20101027-2268-5dmigi-0>}, "authenticity_token"=>"xU/nlWBKY7W+saCQ8+tGZ9zuR5Di629Q4VPkZzhEsqM="}
+Rendering archivos/new
+Completed in 188ms (View: 31, DB: 0) | 200 OK [http://localhost/archivos]
+
+
+Processing ClientesController#index (for 127.0.0.1 at 2010-10-27 18:10:17) [GET]
+  [4;36;1mCliente Load (1125.0ms)[0m   [0;1mSELECT * FROM "clientes" [0m
+Rendering template within layouts/clientes
+Rendering clientes/index
+Completed in 26922ms (View: 21391, DB: 1125) | 200 OK [http://localhost/clientes]
+
+
+Processing ArchivosController#index (for 127.0.0.1 at 2010-10-27 18:11:32) [GET]
+  [4;35;1mArchivo Load (0.0ms)[0m   [0mSELECT * FROM "archivos" [0m
+Rendering archivos/index
+Completed in 63ms (View: 31, DB: 0) | 200 OK [http://localhost/archivos]
+
+
+Processing ClientesController#index (for 127.0.0.1 at 2010-10-27 18:11:43) [GET]
+  [4;36;1mCliente Load (0.0ms)[0m   [0;1mSELECT * FROM "clientes" [0m
+Rendering template within layouts/clientes
+Rendering clientes/index
+Completed in 125ms (View: 47, DB: 0) | 200 OK [http://localhost/clientes]
+
+
+Processing ArchivosController#index (for 127.0.0.1 at 2010-10-27 18:11:46) [GET]
+  [4;35;1mArchivo Load (0.0ms)[0m   [0mSELECT * FROM "archivos" [0m
+Rendering archivos/index
+Completed in 109ms (View: 16, DB: 0) | 200 OK [http://localhost/archivos]
+
+
+Processing ClientesController#index (for 127.0.0.1 at 2010-10-27 18:11:48) [GET]
+  [4;36;1mCliente Load (0.0ms)[0m   [0;1mSELECT * FROM "clientes" [0m
+Rendering template within layouts/clientes
+Rendering clientes/index
+Completed in 78ms (View: 47, DB: 0) | 200 OK [http://localhost/clientes]
+
+
+Processing ArchivosController#index (for 127.0.0.1 at 2010-10-27 18:12:11) [GET]
+  [4;35;1mArchivo Load (0.0ms)[0m   [0mSELECT * FROM "archivos" [0m
+Rendering archivos/index
+Completed in 94ms (View: 16, DB: 0) | 200 OK [http://localhost/archivos]
+
+
+Processing ClientesController#index (for 127.0.0.1 at 2010-10-27 18:12:44) [GET]
+  [4;36;1mCliente Load (15.6ms)[0m   [0;1mSELECT * FROM "clientes" [0m
+Rendering template within layouts/clientes
+Rendering clientes/index
+Completed in 109ms (View: 31, DB: 16) | 200 OK [http://localhost/clientes]
+
+
+Processing ArchivosController#new (for 127.0.0.1 at 2010-10-27 18:12:48) [GET]
+Rendering archivos/new
+Completed in 250ms (View: 219, DB: 0) | 200 OK [http://localhost/archivos/new]
+
+
+Processing ArchivosController#create (for 127.0.0.1 at 2010-10-27 18:13:03) [POST]
+  Parameters: {"commit"=>"Importar", "archivo"=>{"nombre"=>#<File:C:/DOCUME~1/JorgeP/CONFIG~1/Temp/RackMultipart20101027-2268-68feph-0>}, "authenticity_token"=>"xU/nlWBKY7W+saCQ8+tGZ9zuR5Di629Q4VPkZzhEsqM="}
+Rendering archivos/new
+Completed in 391ms (View: 78, DB: 0) | 200 OK [http://localhost/archivos]
+
+
+Processing ArchivosController#create (for 127.0.0.1 at 2010-10-27 18:13:32) [POST]
+  Parameters: {"commit"=>"Importar", "archivo"=>{"nombre"=>#<File:C:/DOCUME~1/JorgeP/CONFIG~1/Temp/RackMultipart20101027-2268-2sbnuv-0>}, "authenticity_token"=>"xU/nlWBKY7W+saCQ8+tGZ9zuR5Di629Q4VPkZzhEsqM="}
+  [4;35;1mArchivo Create (15.6ms)[0m   [0mINSERT INTO "archivos" ("created_at", "nombre_content_type", "updated_at", "nombre_file_name", "nombre_updated_at", "nombre_file_size") VALUES('2010-10-27 21:13:32', 'application/vnd.ms-excel', '2010-10-27 21:13:32', 'cliente.csv', '2010-10-27 21:13:32', 5912)[0m
+[paperclip] Saving attachments.
+[paperclip] saving /pruebas/archivos_csv/4/cliente.csv
+Redirected to http://localhost:3000/archivos/4
+Completed in 22031ms (DB: 16) | 302 Found [http://localhost/archivos]
+
+
+Processing ArchivosController#show (for 127.0.0.1 at 2010-10-27 18:13:54) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mArchivo Load (0.0ms)[0m   [0;1mSELECT * FROM "archivos" WHERE ("archivos"."id" = 4) [0m
+Rendering archivos/show
+Completed in 47ms (View: 16, DB: 0) | 200 OK [http://localhost/archivos/4]
+
+
+Processing ClientesController#index (for 127.0.0.1 at 2010-10-27 18:13:58) [GET]
+  [4;35;1mCliente Load (15.6ms)[0m   [0mSELECT * FROM "clientes" [0m
+Rendering template within layouts/clientes
+Rendering clientes/index
+Completed in 78ms (View: 31, DB: 16) | 200 OK [http://localhost/clientes]
+
+
+Processing ArchivosController#index (for 127.0.0.1 at 2010-10-27 18:13:59) [GET]
+  [4;36;1mArchivo Load (0.0ms)[0m   [0;1mSELECT * FROM "archivos" [0m
+Rendering archivos/index
+Completed in 63ms (View: 31, DB: 0) | 200 OK [http://localhost/archivos]
+
+
+Processing ArchivosController#index (for 127.0.0.1 at 2010-10-27 18:14:38) [GET]
+  [4;35;1mArchivo Load (0.0ms)[0m   [0mSELECT * FROM "archivos" [0m
+Rendering archivos/index
+Completed in 141ms (View: 47, DB: 0) | 200 OK [http://localhost/archivos]
+
+
+Processing ClientesController#index (for 127.0.0.1 at 2010-10-27 18:14:47) [GET]
+  [4;36;1mCliente Load (0.0ms)[0m   [0;1mSELECT * FROM "clientes" [0m
+Rendering template within layouts/clientes
+Rendering clientes/index
+Completed in 63ms (View: 31, DB: 0) | 200 OK [http://localhost/clientes]
+
+
+Processing ArchivosController#new (for 127.0.0.1 at 2010-10-27 18:14:54) [GET]
+Rendering archivos/new
+Completed in 63ms (View: 31, DB: 0) | 200 OK [http://localhost/archivos/new]

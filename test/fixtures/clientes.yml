@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  nombre: MyString
+  domicilio: MyString
+  ing_sistem: 2010-10-26
+
+two:
+  nombre: MyString
+  domicilio: MyString
+  ing_sistem: 2010-10-26
